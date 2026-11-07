@@ -1,0 +1,1 @@
+Imported from PODOLOGY_FULL_CODE_AND_STRESS_AUDIT_2026-11-01.zip (2026-11-01). Original GitHub main branch is unchanged. This snapshot has not been deployed or retested. Personal CRM backup, contract, financial report, video and embedded .git history are intentionally excluded.
