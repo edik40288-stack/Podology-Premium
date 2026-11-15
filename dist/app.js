@@ -13,10 +13,12 @@ let analyticsSession='';
 function track(event,step){try{analyticsSession=analyticsSession||sessionStorage.getItem('podology-analytics-session')||crypto.randomUUID().replace(/-/g,'');sessionStorage.setItem('podology-analytics-session',analyticsSession);navigator.sendBeacon(new URL('/api/analytics',CRM_BASE),new Blob([JSON.stringify({session:analyticsSession,event,step,surface:'website'})],{type:'text/plain'}))}catch{}}
 track('page_view');addEventListener('pagehide',()=>track('page_exit'));
 function clientPortal(section,param,value){
- let dialog=document.querySelector('#live-client-dialog');
- if(!dialog){dialog=document.createElement('dialog');dialog.id='live-client-dialog';dialog.className='live-client-dialog';dialog.innerHTML='<button type="button" class="primary" aria-label="Закрыть кабинет">Закрыть ×</button><iframe title="Защищённый кабинет клиента"></iframe><p>Если кабинет не открывается, <a target="_blank" rel="noopener">откройте его в отдельном окне</a>.</p>';document.body.append(dialog);dialog.querySelector('button').onclick=()=>dialog.close();dialog.addEventListener('close',()=>dialog.querySelector('iframe').src='about:blank');}
- const url=new URL('/client',CRM_BASE);if(analyticsSession)url.searchParams.set('analyticsSession',analyticsSession);if(param&&value!=null)url.searchParams.set(param,String(value));url.hash=section;
- dialog.querySelector('iframe').src=url.href;dialog.querySelector('a').href=url.href;if(!dialog.open)dialog.showModal();
+  const url=new URL('/client',CRM_BASE);
+  if(analyticsSession)url.searchParams.set('analyticsSession',analyticsSession);
+  if(param&&value!=null&&value!=='')url.searchParams.set(param,String(value));
+  url.hash=section;
+  // Use the complete client portal page. No iframe and no duplicate login overlay.
+  window.location.assign(url.href);
 }
 function openBooking(id){track('service_open');clientPortal('services','service',id)}
 function openOrder(id){track('product_open');clientPortal('products','product',id)}
