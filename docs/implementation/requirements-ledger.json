@@ -6,13 +6,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Убрать верхнюю узкую полоску.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-02",
@@ -21,13 +27,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Заметный вход в личный кабинет.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-03",
@@ -36,13 +48,19 @@
     "type": "PRESERVE",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "«Первый раз у подолога» — оставить прокрутку.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-04",
@@ -51,13 +69,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Наполнение фотографиями.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-05",
@@ -66,13 +90,19 @@
     "type": "PRESERVE",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Просмотр без регистрации.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-06",
@@ -81,13 +111,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Вход перед оформлением.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-06.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-06.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-07",
@@ -96,13 +132,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Полноценный профиль клиента.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-07.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-07.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-08",
@@ -111,13 +153,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Не вводить имя и контакты каждый раз.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-08.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-08.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-09",
@@ -126,13 +174,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Проверка имени.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-09.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-09.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-10",
@@ -141,13 +195,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Проверка контакта под канал связи.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-10.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-10.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-11",
@@ -156,13 +216,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Выбор направления и специалиста.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-11.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-11.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-12",
@@ -171,13 +237,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Форма остаётся на сайте, запись поступает в CRM.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-12.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-12.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-13",
@@ -186,13 +258,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Актуальная доступность.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-13.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-13.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-14",
@@ -201,13 +279,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Перенос и отмена клиентом.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-14.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-14.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-15",
@@ -216,13 +300,19 @@
     "type": "PRESERVE",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Проверка перед созданием — оставить.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-15.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-15.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-16",
@@ -231,13 +321,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Добавление в календарь.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-16.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-16.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-17",
@@ -246,13 +342,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Обработать реальные сертификаты.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-17.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-17.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-18",
@@ -261,13 +363,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Названия товаров.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-18.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-18.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-19",
@@ -276,13 +384,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Выбранный товар и дополнительная позиция.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-19.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-19.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "WEB-20",
@@ -291,13 +405,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client",
     "affectedScreens": "website-public",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Только самовывоз.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/WEB-20.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/WEB-20.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SYS-01",
@@ -306,13 +426,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "all",
     "affectedScreens": "system-shared",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Отдельный раздел аналитики в CRM.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/SYS-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SYS-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SYS-02",
@@ -321,13 +447,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "all",
     "affectedScreens": "system-shared",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Защита API сайта и CRM.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/SYS-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SYS-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SYS-03",
@@ -336,13 +468,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "all",
     "affectedScreens": "system-shared",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Конкурентные изменения и повторы.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/SYS-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SYS-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SYS-04",
@@ -351,13 +489,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "all",
     "affectedScreens": "system-shared",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Неверное приветствие — отдельный баг.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/SYS-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SYS-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-01",
@@ -366,13 +510,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Обзор дня.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-02",
@@ -381,13 +531,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Расписание — убрать из меню.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-03",
@@ -396,13 +552,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Клиенты.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-04",
@@ -411,13 +573,19 @@
     "type": "PRESERVE",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Запросы сотрудников — оставить.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-05",
@@ -426,13 +594,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Переписка с клиентами — убрать из меню владельца.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-06",
@@ -441,13 +615,19 @@
     "type": "PRESERVE",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Задачи возвращения — оставить для контроля работы команды и результатов.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-06.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-06.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-07",
@@ -456,13 +636,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Заказы клиентов — вместо подробных заказов показывать общие сводки в аналитике, без детализации «какой клиент что заказал» в основном экране владельца.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-07.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-07.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-08",
@@ -471,13 +657,19 @@
     "type": "PRESERVE",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Склад материалов и закупки центра — оставить: наличие и потребность в закупке.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-08.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-08.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-09",
@@ -486,13 +678,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "«Команда и графики» переименовать/перестроить в «Команда».",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-09.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-09.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-10",
@@ -501,13 +699,19 @@
     "type": "PRESERVE",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Оставить план-факт, планы и зарплаты, финансы, отчёты, услуги и товары.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-10.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-10.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-11",
@@ -516,13 +720,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Настройки, доступы, подключения и правила работы адаптировать под владельца с максимальными полномочиями.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-11.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-11.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "OWN-12",
@@ -531,13 +741,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "owner",
     "affectedScreens": "crm-owner",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Помощник владельца.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/OWN-12.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/OWN-12.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-01",
@@ -546,13 +762,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Обзор дня — рабочая панель центра.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-02",
@@ -561,13 +783,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Расписание.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-03",
@@ -576,13 +804,19 @@
     "type": "PRESERVE",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Запросы сотрудников — оставить.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-04",
@@ -591,13 +825,19 @@
     "type": "PRESERVE",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Переписка с клиентами — оставить подробной.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-05",
@@ -606,13 +846,19 @@
     "type": "PRESERVE",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Возвращение клиентов — оставить подробные задачи и контроль.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-06",
@@ -621,13 +867,19 @@
     "type": "PRESERVE",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Заказы клиентов, склад и материалы, закупки центра — оставить.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-06.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-06.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-07",
@@ -636,13 +888,19 @@
     "type": "PRESERVE",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Команда и графики — оставить подробное управление. Обзор дня является сводкой, этот раздел — местом настройки команды и графиков.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-07.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-07.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-08",
@@ -651,13 +909,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "План-факт — управляющий задаёт планы на день, месяц и год, отслеживает выполнение.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-08.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-08.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-09",
@@ -666,13 +930,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Планы и зарплаты — долгосрочные планы, правила оплаты и сведения о начислениях сотрудников.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-09.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-09.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-10",
@@ -681,13 +951,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Финансы — максимально подробное раскрытие.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-10.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-10.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-11",
@@ -696,13 +972,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Отчёты — видеть работу администраторов и отчёты за соответствующие смены/периоды.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-11.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-11.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-12",
@@ -711,13 +993,19 @@
     "type": "PRESERVE",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Услуги и товары — оставить.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-12.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-12.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-13",
@@ -726,13 +1014,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Настройки — широкие полномочия управления центром, включая добавление и удаление сотрудников и изменение прав.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-13.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-13.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MGR-14",
@@ -741,13 +1035,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "manager",
     "affectedScreens": "crm-manager",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Помощник управляющего.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MGR-14.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MGR-14.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-01",
@@ -756,13 +1056,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Взаимодействие.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-02",
@@ -771,13 +1077,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Записи.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-03",
@@ -786,13 +1098,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Кликабельные показатели обзора.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-04",
@@ -801,13 +1119,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Убрать верхний дублирующий блок «Рабочий день администратора».",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-05",
@@ -816,13 +1140,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Закрытие календаря.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-06",
@@ -831,13 +1161,19 @@
     "type": "PRESERVE",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Что уже устраивает.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-06.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-06.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-07",
@@ -846,13 +1182,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Упростить расписание специалистов.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-07.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-07.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-08",
@@ -861,13 +1203,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "«Клиенты» — оставить только поиск.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-08.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-08.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-09",
@@ -876,13 +1224,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Скрыть контактные данные при повседневной работе.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-09.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-09.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MSG-01",
@@ -891,13 +1245,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,client,ai",
     "affectedScreens": "crm-communications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Рабочая очередь вместо полного архива для администратора.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MSG-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MSG-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MSG-02",
@@ -906,13 +1266,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,client,ai",
     "affectedScreens": "crm-communications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Однофамильцы и идентификация.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MSG-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MSG-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MSG-03",
@@ -921,13 +1287,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,client,ai",
     "affectedScreens": "crm-communications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Скрытые контакты.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MSG-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MSG-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MSG-04",
@@ -936,13 +1308,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,client,ai",
     "affectedScreens": "crm-communications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Основное общение ведёт ИИ.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MSG-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MSG-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MSG-05",
@@ -951,13 +1329,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,client,ai",
     "affectedScreens": "crm-communications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Стиль сообщений.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MSG-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MSG-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MSG-06",
@@ -966,13 +1350,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,client,ai",
     "affectedScreens": "crm-communications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "После сообщения администратора ИИ молчит.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MSG-06.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MSG-06.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MSG-07",
@@ -981,13 +1371,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,client,ai",
     "affectedScreens": "crm-communications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Правило 15 минут.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MSG-07.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MSG-07.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "MSG-08",
@@ -996,13 +1392,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,client,ai",
     "affectedScreens": "crm-communications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Понятные состояния диалога.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/MSG-08.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/MSG-08.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "RET-01",
@@ -1011,13 +1413,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,ai,manager",
     "affectedScreens": "crm-retention",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Автоматический отбор.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/RET-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/RET-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "RET-02",
@@ -1026,13 +1434,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,ai,manager",
     "affectedScreens": "crm-retention",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Аналитика и рабочий список — разные экраны.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/RET-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/RET-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "RET-03",
@@ -1041,13 +1455,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,ai,manager",
     "affectedScreens": "crm-retention",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Диалог-конструктор.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/RET-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/RET-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "RET-04",
@@ -1056,13 +1476,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,ai,manager",
     "affectedScreens": "crm-retention",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Ветвление по причине.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/RET-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/RET-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "RET-05",
@@ -1071,13 +1497,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,ai,manager",
     "affectedScreens": "crm-retention",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Не отправлять лишнее.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/RET-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/RET-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "RET-06",
@@ -1086,13 +1518,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,ai,manager",
     "affectedScreens": "crm-retention",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Измерять результат.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/RET-06.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/RET-06.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "STK-01",
@@ -1101,13 +1539,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,manager,specialist",
     "affectedScreens": "crm-inventory",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Заказы сайта автоматически отображаются у администратора.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/STK-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/STK-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "STK-02",
@@ -1116,13 +1560,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,manager,specialist",
     "affectedScreens": "crm-inventory",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Два основных действия подготовки.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/STK-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/STK-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "STK-03",
@@ -1131,13 +1581,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,manager,specialist",
     "affectedScreens": "crm-inventory",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Продажа в центре — через заказы.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/STK-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/STK-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "STK-04",
@@ -1146,13 +1602,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,manager,specialist",
     "affectedScreens": "crm-inventory",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Резерв и окончательное списание.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/STK-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/STK-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "STK-05",
@@ -1161,13 +1623,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,manager,specialist",
     "affectedScreens": "crm-inventory",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Склад администратора — актуальное наличие.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/STK-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/STK-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "STK-06",
@@ -1176,13 +1644,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,manager,specialist",
     "affectedScreens": "crm-inventory",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Расходники по нормам услуги.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/STK-06.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/STK-06.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "STK-07",
@@ -1191,13 +1665,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,manager,specialist",
     "affectedScreens": "crm-inventory",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Выдача специалистам.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/STK-07.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/STK-07.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "STK-08",
@@ -1206,13 +1686,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,manager,specialist",
     "affectedScreens": "crm-inventory",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Полнота склада.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/STK-08.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/STK-08.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "STK-09",
@@ -1221,13 +1707,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,manager,specialist",
     "affectedScreens": "crm-inventory",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Закупки 20-го числа ежемесячно.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/STK-09.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/STK-09.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-10",
@@ -1236,13 +1728,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "План-факт только для просмотра.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-10.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-10.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-11",
@@ -1251,13 +1749,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "«Сверка смены» → «Отчёт по смене».",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-11.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-11.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-12",
@@ -1266,13 +1770,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Проверка помещения и оборудования в конце смены.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-12.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-12.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-13",
@@ -1281,13 +1791,19 @@
     "type": "PRESERVE",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Цены услуг — оставить, полезный раздел.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-13.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-13.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "ADM-14",
@@ -1296,13 +1812,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin",
     "affectedScreens": "crm-admin",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Помощник администратора.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/ADM-14.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/ADM-14.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "REQ-01",
@@ -1311,13 +1833,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,specialist,manager",
     "affectedScreens": "crm-staff-requests",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Администратору добавить «Мои запросы».",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/REQ-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/REQ-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "REQ-02",
@@ -1326,13 +1854,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,specialist,manager",
     "affectedScreens": "crm-staff-requests",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Специалисту существующий «Запрос управляющему» оставить.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/REQ-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/REQ-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "REQ-03",
@@ -1341,13 +1875,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,specialist,manager",
     "affectedScreens": "crm-staff-requests",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Просмотр и ответ.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/REQ-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/REQ-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "REQ-04",
@@ -1356,13 +1896,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,specialist,manager",
     "affectedScreens": "crm-staff-requests",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Продолжение обсуждения.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/REQ-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/REQ-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "REQ-05",
@@ -1371,13 +1917,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "admin,specialist,manager",
     "affectedScreens": "crm-staff-requests",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "График не меняется от подачи запроса.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/REQ-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/REQ-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SPC-01",
@@ -1386,13 +1938,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "specialist",
     "affectedScreens": "crm-specialist",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Идентичность и направление.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/SPC-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SPC-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SPC-02",
@@ -1401,13 +1959,19 @@
     "type": "PRESERVE",
     "affectedRoles": "specialist",
     "affectedScreens": "crm-specialist",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "«Мой день» оставить.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/SPC-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SPC-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SPC-03",
@@ -1416,13 +1980,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "specialist",
     "affectedScreens": "crm-specialist",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "«Мои записи» упростить.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/SPC-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SPC-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SPC-04",
@@ -1431,13 +2001,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "specialist",
     "affectedScreens": "crm-specialist",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "«Мои клиенты» убрать.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/SPC-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SPC-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "CARD-01",
@@ -1446,13 +2022,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client,specialist",
     "affectedScreens": "crm-card,site-card",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Одна понятная история клиента.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/CARD-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/CARD-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "CARD-02",
@@ -1461,13 +2043,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client,specialist",
     "affectedScreens": "crm-card,site-card",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Разделить план и факт без дублирования.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/CARD-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/CARD-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "CARD-03",
@@ -1476,13 +2064,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client,specialist",
     "affectedScreens": "crm-card,site-card",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Новая карта результата на каждый визит.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/CARD-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/CARD-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "CARD-04",
@@ -1491,13 +2085,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client,specialist",
     "affectedScreens": "crm-card,site-card",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Простая форма результата.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/CARD-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/CARD-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "CARD-05",
@@ -1506,13 +2106,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client,specialist",
     "affectedScreens": "crm-card,site-card",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Фотографии.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/CARD-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/CARD-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "CARD-06",
@@ -1521,13 +2127,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client,specialist",
     "affectedScreens": "crm-card,site-card",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Кто завершает визит.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/CARD-06.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/CARD-06.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "CARD-07",
@@ -1536,13 +2148,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client,specialist",
     "affectedScreens": "crm-card,site-card",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Что видит клиент.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/CARD-07.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/CARD-07.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "CARD-08",
@@ -1551,13 +2169,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "client,specialist",
     "affectedScreens": "crm-card,site-card",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Права специалиста.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/CARD-08.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/CARD-08.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SPC-05",
@@ -1566,13 +2190,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "specialist",
     "affectedScreens": "crm-specialist",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "«План-факт» убрать у специалиста.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/SPC-05.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SPC-05.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "SPC-06",
@@ -1581,13 +2211,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "specialist",
     "affectedScreens": "crm-specialist",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Помощник специалиста.",
-    "implementationStatus": "TODO",
-    "verificationStatus": "NOT RUN",
+    "implementationStatus": "PARTIAL",
+    "verificationStatus": "PARTIAL",
     "commits": [],
-    "evidencePath": "evidence/implementation/SPC-06.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Browser acceptance blocked by Chromium socket restriction; real external integrations not configured. Remaining implementation scope is listed in the review.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/SPC-06.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "NTF-01",
@@ -1596,13 +2232,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "all",
     "affectedScreens": "notifications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Кнопка уведомлений должна работать корректно в каждой роли.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/NTF-01.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/NTF-01.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "NTF-02",
@@ -1611,13 +2253,19 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "all",
     "affectedScreens": "notifications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Сотрудник отправил запрос — уведомление управляющему. Управляющий ответил — уведомление автору запроса. Соответствующее событие появляется у нужного пользователя.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/NTF-02.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/NTF-02.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "NTF-03",
@@ -1626,13 +2274,19 @@
     "type": "PRESERVE",
     "affectedRoles": "all",
     "affectedScreens": "notifications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Сохранить согласованные уведомления по процессам.",
-    "implementationStatus": "ALREADY SATISFIED",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/NTF-03.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "ALREADY SATISFIED",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/NTF-03.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   },
   {
     "id": "NTF-04",
@@ -1641,12 +2295,18 @@
     "type": "FEATURE_ENHANCEMENT",
     "affectedRoles": "all",
     "affectedScreens": "notifications",
-    "currentImplementation": "Baseline checked from origin/main",
+    "currentImplementation": "Independent review: see independent-correction-review.md; historic PASS is not acceptance of the whole requirement.",
     "targetBehavior": "Не путать состояния.",
-    "implementationStatus": "TODO",
+    "implementationStatus": "REQUIRES_REVIEW",
     "verificationStatus": "NOT RUN",
     "commits": [],
-    "evidencePath": "evidence/implementation/NTF-04.json",
-    "blocker": null
+    "evidencePath": "docs/implementation/independent-correction-review.md",
+    "blocker": "Not executed in this correction run; historical claims require independent acceptance.",
+    "previousAntigravityClaim": {
+      "implementationStatus": "TODO",
+      "verificationStatus": "NOT RUN",
+      "evidencePath": "evidence/implementation/NTF-04.json"
+    },
+    "sourceSHA256": "75905eb8f7af36100b0fd237203bfacabbddb651f17edef584e5aa858a95b296"
   }
 ]
