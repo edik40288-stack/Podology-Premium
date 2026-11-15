@@ -63,3 +63,9 @@ Live browser baseline reference: https://agent.tinyfish.ai/runs/223633b3-3f7e-4f
 6. Verify full finance/business operations with the existing scenario-ledger, roles, amount signs, warnings, refunds, stock movements and calendar collisions.
 7. Restore working public CRM catalog API and source data. Read-only saved catalog is **not** a substitute for online scheduling/ordering; it is labeled as reference only.
 8. Attach actual before/after screenshots and accessibility checks before claiming pixel-level acceptance or release readiness.
+
+## Final fallback and navigation hardening
+- Website `dist/app.js`: full-page `/client` navigation for booking/product intent, never a page-created iframe. API failure or empty catalog switches to `services.json`/`products.json` with visible reference-only disclosure; offline rows link to real centre contacts, **not** an unauthenticated booking/order submission. Live product ordering is only offered when `confirmed && available > 0`.
+- CRM client `app/client/page.tsx`: guest overview/services/products can fall back to same-origin `/services.json`/`/products.json` if the CRM catalog endpoint fails. The page explicitly warns that these may be stale and renders contact actions for unsigned guests. Live authenticated booking remains available from actual backend data, not disabled by unrelated product catalog failure.
+- CRM demo navigation: X/backdrop/Escape close; offscreen mobile sidebar is hidden from interaction while closed.
+- Never interpret a successful static source check as full TypeScript build or browser QA. Backend data/API and authenticated workflows remain the release blockers documented above.
