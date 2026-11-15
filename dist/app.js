@@ -5,7 +5,7 @@ const $$ = s => document.querySelectorAll(s);
 const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money = n => Number(n).toLocaleString('ru-RU') + ' ₽';
 
-let publicMedia=[],services=[],products=[],category='Все',search='',showAll=false;
+let publicMedia=[],services=[],products=[],category='Все',search='',showAll=false,servicesLive=false,productsLive=false;
 const categories=['Все','ПОДОЛОГИЯ','Педикюр и Маникюр ЭСТЕТИКА','Ногтевой Сервис'];
 const categoryLabels=['Все услуги','Подология','Эстетический уход','Ногтевой сервис'];
 const CRM_BASE=['localhost','127.0.0.1'].includes(location.hostname)?'http://127.0.0.1:8787':'https://podocare-center-crm.rainyplum10.chatgpt.site';
@@ -20,8 +20,8 @@ function clientPortal(section,param,value){
   // Use the complete client portal page. No iframe and no duplicate login overlay.
   window.location.assign(url.href);
 }
-function openBooking(id){track('service_open');clientPortal('services','service',id)}
-function openOrder(id){track('product_open');clientPortal('products','product',id)}
+function openBooking(id){track('service_open');if(!servicesLive){document.querySelector('#contacts')?.scrollIntoView({behavior:'smooth'});return;}clientPortal('services','service',id)}
+function openOrder(id){track('product_open');if(!productsLive){document.querySelector('#contacts')?.scrollIntoView({behavior:'smooth'});return;}clientPortal('products','product',id)}
 function openCabinet(section='overview'){const url=new URL('/client',CRM_BASE);if(analyticsSession)url.searchParams.set('analyticsSession',analyticsSession);url.hash=section;window.location.assign(url.href)}
 function openClientProfile(){openCabinet('overview')}
 function manageBookings(){openCabinet('visits')}
@@ -53,7 +53,7 @@ function renderServices() {
         </div>
         <span class="duration">${escapeHTML(s.duration)} мин</span>
         <span class="price">${s.floating ? 'от ' : ''}${money(s.price)}</span>
-        <button class="booking-link" aria-label="Записаться: ${escapeHTML(s.name)}" data-service="${escapeHTML(s.id)}">Записаться <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+        ${servicesLive?`<button class="booking-link" aria-label="Записаться: ${escapeHTML(s.name)}" data-service="${escapeHTML(s.id)}">Записаться <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>`:`<a class="booking-link" href="https://t.me/podologKUTSYTOY" target="_blank" rel="noopener noreferrer" aria-label="Уточнить услугу: ${escapeHTML(s.name)}">Уточнить <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>`}
       </article>
     `).join('') || '<p class="empty">Услуга не найдена. Попробуйте другое название.</p>';
   }
@@ -100,7 +100,7 @@ function renderProducts() {
         <p>Профессиональный уход для домашнего применения. Наличие подтверждается в центре.</p>
         <div class="product-price">
           <b>${money(p.price)}</b>
-          <button class="booking-link" data-product="${escapeHTML(p.id)}">Заказать <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+          ${productsLive?`<button class="booking-link" data-product="${escapeHTML(p.id)}">Заказать <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>`:`<a class="booking-link" href="https://t.me/podologKUTSYTOY" target="_blank" rel="noopener noreferrer">Уточнить наличие <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>`}
         </div>
       </div>
     </article>
@@ -153,24 +153,46 @@ document.addEventListener('click', e => {
 
 document.addEventListener('click',e=>{const button=e.target.closest?.('[data-service],[data-product]');if(button?.hasAttribute('data-service'))openBooking(button.dataset.service);else if(button?.hasAttribute('data-product'))openOrder(button.dataset.product)});
 // Load live catalog
+function catalogNotice(target, message) {
+ const list=document.querySelector(target);
+ if(!list)return;
+ const id=target==='#service-list'?'service-catalog-notice':'product-catalog-notice';
+ let note=document.getElementById(id);
+ if(!note){note=document.createElement('p');note.id=id;note.className='catalog-source-note';note.setAttribute('role','status');list.parentNode.insertBefore(note,list);}
+ note.textContent=message;
+ note.hidden=!message;
+}
+async function snapshot(file) {
+ try {
+  const r=await fetch(file,{cache:'no-store'});
+  if(!r.ok)throw Error('snapshot unavailable');
+  const items=await r.json();
+  if(!Array.isArray(items))return [];
+  return items.filter(x=>x&&typeof x.name==='string'&&Number.isFinite(Number(x.price))&&x.id!=null).map(x=>({...x,id:String(x.id)}));
+ } catch{return [];}
+}
 async function loadCatalog() {
-  try {
-    const res = await fetch(new URL('/api/catalog', CRM_BASE));
-    if (!res.ok) throw new Error();
-    const data = await res.json();
-    publicMedia=Array.isArray(data.media)?data.media:[];renderMedia();
-    if (Array.isArray(data.services) && data.services.length) services = data.services;
-    if (Array.isArray(data.products) && data.products.length) products = data.products;
-  } catch (e) {
-    services=[];products=[];
-    renderServices();renderProducts();
-    if($('#service-list'))$('#service-list').innerHTML='<p role="alert">Не удалось загрузить актуальный каталог. Повторите загрузку страницы или свяжитесь с центром.</p>';
-    if($('#product-list'))$('#product-list').innerHTML='<p role="alert">Каталог товаров временно недоступен.</p>';
-    return;
-  }
-
-  renderServices();
-  renderProducts();
+ let fresh=null;
+ try {
+  const signal=typeof AbortSignal!=='undefined'&&typeof AbortSignal.timeout==='function'?AbortSignal.timeout(7000):undefined;
+  const res=await fetch(new URL('/api/catalog',CRM_BASE),{signal,cache:'no-store'});
+  if(!res.ok)throw Error('Catalog API unavailable');
+  fresh=await res.json();
+  if(!fresh||typeof fresh!=='object')fresh=null;
+ }catch{fresh=null;}
+ servicesLive=Array.isArray(fresh?.services)&&fresh.services.length>0;
+ productsLive=Array.isArray(fresh?.products)&&fresh.products.length>0;
+ publicMedia=Array.isArray(fresh?.media)?fresh.media:[];
+ if(servicesLive)services=fresh.services;
+ else services=await snapshot('services.json');
+ if(productsLive)products=fresh.products;
+ else products=await snapshot('products.json');
+ // Never present the offline snapshot as live availability or final pricing.
+ catalogNotice('#service-list',servicesLive?'':services.length?'CRM временно недоступна. Ниже сохранённый справочный перечень: стоимость и возможность записи уточняйте в центре.':'Каталог услуг временно недоступен. Свяжитесь с центром, чтобы уточнить цены и запись.');
+ catalogNotice('#product-list',productsLive?'':products.length?'CRM временно недоступна. Ниже сохранённый справочный перечень: цены и остатки уточняйте перед заказом.':'Каталог товаров временно недоступен. Уточните наличие в центре.');
+ renderMedia();
+ renderServices();
+ renderProducts();
 }
 $('#search')?.addEventListener('input',e=>{search=e.target.value;renderServices()});
 loadCatalog();
