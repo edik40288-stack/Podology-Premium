@@ -39,6 +39,15 @@ try{
     font:window.getComputedStyle(document.querySelector('body')).fontFamily
    };
   });
+  if(width===390||width===1440){
+   const photos=page.locator('#gallery .dikidi-photo img');
+   for(let index=0;index<await photos.count();index++){
+     await photos.nth(index).scrollIntoViewIfNeeded();
+     await photos.nth(index).evaluate(async(img)=>{try{await img.decode()}catch{}});
+   }
+   await page.locator('#gallery').screenshot({path:`${out}/gallery-${width}.png`,animations:'disabled'});
+   await page.evaluate(()=>window.scrollTo(0,0));
+  }
   await page.screenshot({path:`${out}/site-${width}.png`,fullPage:true,animations:'disabled'});
   if(width<=390){
    const menu=page.locator('button.menu');
