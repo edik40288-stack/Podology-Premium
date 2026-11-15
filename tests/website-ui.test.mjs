@@ -110,7 +110,7 @@ test('mobile menu toggle and close keep ARIA expanded state in sync',()=>{
   assert.equal(f.nodes.get('.menu').getAttribute('aria-expanded'),'false');
 });
 
-test('DIKIDI price revisions, four categories and zero-price consultation are consistent',()=>{
+test('DIKIDI price revisions, four categories and zero-price consultation are consistent',async()=>{
  assert.equal(new Set(localServices.map(x=>String(x.id))).size,99);
  assert.equal(new Set(localServices.map(x=>x.category)).size,4);
  assert.equal(localServices.find(x=>String(x.id)==='19789766').price,5000);
@@ -120,9 +120,9 @@ test('DIKIDI price revisions, four categories and zero-price consultation are co
  assert.equal(localServices.find(x=>String(x.id)==='local-podology-consult-60-20261115').price,1500);
  assert.equal(localServices.filter(x=>x.price===0).length,1);
  const f=fixture({api:{services:localServices,products:localProducts}});
- const free=vm.runInContext("services.find(x=>x.price===0)?.id",f.context);
- // The website uses the same ID for the free consultation after the rename.
- assert.equal(free,undefined,'Fixture should load catalog first; no stale session data');
+ await f.load();
+ vm.runInContext('chooseConsultation()',f.context);
+ assert.equal(new URL(f.navigations[0]).searchParams.get('service'),'22883627','Free consultation ID must remain stable');
 });
 
 test('real photo gallery includes only attributed, explicitly provided DIKIDI image URLs',()=>{
