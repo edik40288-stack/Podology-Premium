@@ -31,14 +31,14 @@ function selectCategory(c) {
   renderServices();
   const sec = $('#services');
   if (sec) sec.scrollIntoView({behavior: 'smooth'});
-  document.querySelector('nav')?.classList.remove('open');
+  closeNavigation();
 }
 
 function renderServices() {
   let filtered = services.filter(s => (category === 'Все' || s.category === category) && s.name.toLowerCase().includes(search.toLowerCase()));
   let list = showAll ? filtered : filtered.slice(0, 8);
   if ($('#category-tabs')) {
-    $('#category-tabs').innerHTML = categories.map((c, i) => `<button class="${c === category ? 'active' : ''}" onclick="selectCategory('${c}')">${categoryLabels[i]}</button>`).join('');
+    $('#category-tabs').innerHTML = categories.map((c, i) => `<button type="button" aria-pressed="${c === category ? 'true' : 'false'}" class="${c === category ? 'active' : ''}" onclick="selectCategory('${c}')">${categoryLabels[i]}</button>`).join('');
   }
   if ($('#result-count')) $('#result-count').textContent = 'Найдено: ' + filtered.length;
   if ($('#service-list')) {
@@ -57,6 +57,7 @@ function renderServices() {
   }
   if ($('#show-more')) {
     $('#show-more').hidden = filtered.length <= 8;
+    $('#show-more').setAttribute('aria-expanded',String(showAll));
     $('#show-more').innerHTML = showAll ? 'Свернуть список ↑' : `Показать все ${filtered.length} услуг ↓`;
   }
 }
@@ -104,8 +105,16 @@ function renderProducts() {
   `).join('');
 }
 
+function closeNavigation() {
+  const nav = document.querySelector('#main-navigation');
+  const button = document.querySelector('.menu');
+  if (!nav || !nav.classList.contains('open')) return;
+  nav.classList.remove('open');
+  button?.setAttribute('aria-expanded', 'false');
+  button?.setAttribute('aria-label', 'Открыть меню');
+}
 function toggleNavigation() {
-  const nav = document.querySelector('nav');
+  const nav = document.querySelector('#main-navigation');
   const isOpen = nav.classList.toggle('open');
   const button = document.querySelector('.menu');
   if (button) {
@@ -114,6 +123,16 @@ function toggleNavigation() {
   }
 }
 
+// Keep expanded mobile navigation and its menu button in sync.
+document.querySelector('#main-navigation')?.addEventListener('click', e => {
+  if (e.target.closest('a[href^="#"]')) closeNavigation();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeNavigation();
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('header')) closeNavigation();
+});
 // Close dialog on backdrop click
 ['booking-dialog', 'order-dialog', 'profile-dialog', 'certificate-dialog'].forEach(id => {
   const d = document.getElementById(id);
