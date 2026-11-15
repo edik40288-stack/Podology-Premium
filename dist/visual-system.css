@@ -71,3 +71,13 @@ header #main-navigation>a:not(.profile-btn){display:inline-flex;align-items:cent
 header #main-navigation>a:not(.profile-btn)::after{display:none}
 @media(hover:hover){header #main-navigation>a:not(.profile-btn):hover{background:#e7eddf;color:#254d35}}
 @media(max-width:760px){header #main-navigation>a:not(.profile-btn){display:flex;min-height:46px;margin-inline:0;padding:11px 13px;width:100%}}
+
+/* Honest offline catalogue state: reference listings, not pretend online booking. */
+.catalog-source-note{margin:18px 0 4px;padding:15px 18px;border:1px solid #e5dcc3;border-left:4px solid #b7a776;background:#faf7ed;border-radius:12px;color:#615c46;font-size:13px;line-height:1.7;max-width:80ch}
+.catalog-source-note[hidden]{display:none}
+.service>.booking-link,.product-price>.booking-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;text-align:center;line-height:1.5;color:#2b5637;background:#eaf2e4;border:1px solid #c0d1b4;border-radius:30px;min-height:44px;padding:10px 14px;white-space:nowrap;font-size:13px;font-weight:700}
+.service>.booking-link .direction-icon,.product-price>.booking-link .direction-icon{flex-shrink:0;margin-left:0}
+.product-price>.booking-link{white-space:normal;max-width:100%}
+.catalog .service h3,.catalog .service .price{overflow-wrap:anywhere}
+@media(max-width:760px){.catalog-source-note{margin:14px 0;padding:13px 15px;font-size:12px}.product-price>.booking-link{font-size:12px}}
+@media(hover:hover){.service>a.booking-link:hover,.product-price>a.booking-link:hover{background:#deebd7;border-color:#99b98e;color:#244c30;text-decoration:none}}
