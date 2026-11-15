@@ -6,8 +6,8 @@ const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','
 const money = n => Number(n).toLocaleString('ru-RU') + ' ₽';
 
 let publicMedia=[],services=[],products=[],category='Все',search='',showAll=false,servicesLive=false,productsLive=false;
-const categories=['Все','ПОДОЛОГИЯ','Педикюр и Маникюр ЭСТЕТИКА','Ногтевой Сервис'];
-const categoryLabels=['Все услуги','Подология','Эстетический уход','Ногтевой сервис'];
+const categories=['Все','ПОДОЛОГИЯ','Ортопедические Стельки ЦИТО','Педикюр и Маникюр ЭСТЕТИКА','Ногтевой Сервис'];
+const categoryLabels=['Все услуги','Подология','Ортопедические стельки','Эстетический уход','Ногтевой сервис'];
 const CRM_BASE=['localhost','127.0.0.1'].includes(location.hostname)?'http://127.0.0.1:8787':'https://podocare-center-crm.rainyplum10.chatgpt.site';
 let analyticsSession='';
 function track(event,step){try{analyticsSession=analyticsSession||sessionStorage.getItem('podology-analytics-session')||crypto.randomUUID().replace(/-/g,'');sessionStorage.setItem('podology-analytics-session',analyticsSession);navigator.sendBeacon(new URL('/api/analytics',CRM_BASE),new Blob([JSON.stringify({session:analyticsSession,event,step,surface:'website'})],{type:'text/plain'}))}catch{}}
@@ -20,7 +20,7 @@ function clientPortal(section,param,value){
   // Use the complete client portal page. No iframe and no duplicate login overlay.
   window.location.assign(url.href);
 }
-function openBooking(id){track('service_open');if(!servicesLive){document.querySelector('#contacts')?.scrollIntoView({behavior:'smooth'});return;}clientPortal('services','service',id)}
+function openBooking(id){track('service_open');if(!id){if(servicesLive)clientPortal('services');else document.querySelector('#services')?.scrollIntoView({behavior:'smooth'});return;}if(!servicesLive){document.querySelector('#contacts')?.scrollIntoView({behavior:'smooth'});return;}clientPortal('services','service',id)}
 function openOrder(id){track('product_open');if(!productsLive){document.querySelector('#contacts')?.scrollIntoView({behavior:'smooth'});return;}clientPortal('products','product',id)}
 function openCabinet(section='overview'){const url=new URL('/client',CRM_BASE);if(analyticsSession)url.searchParams.set('analyticsSession',analyticsSession);url.hash=section;window.location.assign(url.href)}
 function openClientProfile(){openCabinet('overview')}
@@ -65,7 +65,7 @@ function renderServices() {
 }
 
 function chooseConsultation() {
-  const c = services.find(s => s.name.trim().toUpperCase() === 'КОНСУЛЬТАЦИЯ ПОДОЛОГА' && s.price === 0);
+  const c = services.find(s => s.name.trim().toUpperCase().startsWith('КОНСУЛЬТАЦИЯ ПОДОЛОГА') && Number(s.price) === 0);
   openBooking(c?.id || services[0]?.id);
 }
 
