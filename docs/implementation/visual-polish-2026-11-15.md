@@ -40,3 +40,25 @@ Visible six figures: incoming payments, refunds, net receipts, operating expense
 CRM: `app/visual-system.css`, `app/finance-overview.tsx`, `app/business-views.tsx`, `app/layout.tsx`.
 Website: `dist/visual-system.css`, `dist/index.html`, `dist/app.js`.
 Supporting check logs: CRM `evidence/visual-polish-2026-11-15/`.
+
+## Follow-up polish in the same working branch (2026-11-15)
+
+Scope: a targeted second pass on top of the visual system above. No changes to the accounting formulas, CRM API contract, authentication, booking state machine or customer-cabinet sections. `main` and production remain untouched.
+
+### Site follow-up
+- Restored the correct column width for catalogue booking buttons: the prior service grid still reserved a 40–44 px icon-only column, although the rendered action now says “Записаться” and includes an SVG arrow. The new responsive grid reserves a full button width and uses a two-row service layout on narrow screens.
+- Replaced inconsistent header link underline animation with soft pill-style hover feedback without changing link destinations or main palette.
+- Mobile menu gets a subtle open animation; its toggle state now synchronizes on link click, outside click and Escape. Service-category buttons have `aria-pressed`, and “show all” reports `aria-expanded`.
+
+### CRM follow-up
+- Finance date filters now have visible “Период отчёта / С / По” labels and a properly positioned date-picker overlay, including mobile sizing. The underlying date-filter state and query flow are unchanged.
+- Six original formula values and operation IDs remain server-sourced. Management result gets a clear secondary emphasis; source-operation dates use human-readable labels and the source count is visible.
+- Existing server-generated finance warnings appear in a collapsed, accessible disclosure with a count, so document/ledger issues are easier to find without crowding the summary.
+- Active finance tabs expose `aria-pressed`, financial tables retain a usable minimum width and horizontal scrolling on narrow viewports.
+
+### Verification for this follow-up
+- GitHub branch source and committed blob SHAs were read back. Website JavaScript parsed successfully as JavaScript without execution.
+- Both presentation CSS files passed a brace-balance/static structure check. Financial presentation classes, date-control wrappers, tab states and warning disclosure were confirmed in the committed source.
+- `lib/finance.ts` retained its original blob SHA `db781084a6e22f06d3c3d80015526ca6f727e9ed`.
+- **Not executed**: fresh CRM TypeScript build, regression suite, real-browser screenshots of the updated working branches, logged-in finance page visual review, keyboard interaction end-to-end, mobile browser matrix and full customer journey regression. The earlier build/test evidence in this document is not evidence of passing these new commits.
+- Before merge, test 320/375/768/1440 px layouts plus 200% zoom. Verify: service CTA full text, mobile-menu Escape and link close, financial date popovers, empty reports, signed and very long amounts, warning disclosure, user registration and intact client cabinet. Run CRM test/typecheck/build and site browser E2E in an isolated preview.
