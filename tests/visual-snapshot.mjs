@@ -16,6 +16,12 @@ try{
   await page.route('**/api/catalog',route=>route.abort('failed'));
   await page.goto(BASE,{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(()=>document.querySelectorAll('#service-list .service').length>0,{timeout:20000});
+  // Browser screenshots normally do not scroll through lazy-loaded photos.
+  // Explicitly request media to verify the DIKIDI CDN instead of accepting blank cards.
+  if(width===390||width===1440){
+    await page.evaluate(()=>document.querySelectorAll('.dikidi-photo img').forEach(img=>{img.loading='eager'}));
+    await page.waitForFunction(()=>[...document.querySelectorAll('.dikidi-photo img')].every(img=>img.complete),null,{timeout:20000}).catch(()=>{});
+  }
   const measures=await page.evaluate(()=>{
    const s=(q)=>[...document.querySelectorAll(q)];
    const rect=(el)=>{const b=el.getBoundingClientRect();return {width:Math.round(b.width),height:Math.round(b.height),right:Math.round(b.right)}};
@@ -24,6 +30,9 @@ try{
     documentWidth:document.documentElement.scrollWidth,
     serviceCount:s('#service-list .service').length,
     productCount:s('#product-list .product-card').length,
+    sourcePhotos:s('.dikidi-photo img').length,
+    loadedPhotos:s('.dikidi-photo img').filter(img=>img.complete&&img.naturalWidth>0).length,
+    brokenPhotos:s('.dikidi-photo img').filter(img=>img.complete&&img.naturalWidth===0).length,
     bookingButtons:s('#service-list .booking-link').map(rect),
     primaryButtons:s('button.primary, a.primary').filter(el=>rect(el).width>0).map(rect),
     offlineBanner:s('.catalog-source-note').map(el=>el.textContent),
@@ -44,6 +53,7 @@ try{
   if(measures.serviceCount<1)issues.push('Services not rendered after outage');
   if(measures.productCount<1)issues.push('Products not rendered after outage');
   if(measures.bookingButtons.some(x=>x.width<108||x.height<40))issues.push('Catalog action under 108px wide or 40px tall');
+  if((width===390||width===1440)&&measures.loadedPhotos<1)issues.push('DIKIDI gallery photo URLs fail to load; do not ship empty photo placeholders');
   if(errors.length)issues.push('Browser errors: '+errors.join('; '));
   evidence.push({width,...measures,errors,issues});
   if(issues.length)failed=true;
