@@ -65,3 +65,9 @@ dialog{border:1px solid #d8e2cf;border-radius:23px;box-shadow:0 30px 100px #1c3d
 }
 @media(max-width:380px){.service{column-gap:9px}.service>.booking-link{min-width:114px;padding:9px 9px}.service .price{font-size:12px}}
 @media(prefers-reduced-motion:reduce){#main-navigation,.service>.booking-link{transition:none!important;transform:none!important}}
+
+/* Navigation uses one calm selected/hover treatment instead of competing underline animations. */
+header #main-navigation>a:not(.profile-btn){display:inline-flex;align-items:center;min-height:44px;padding:9px 11px;margin-inline:-11px;border-radius:10px;text-decoration:none}
+header #main-navigation>a:not(.profile-btn)::after{display:none}
+@media(hover:hover){header #main-navigation>a:not(.profile-btn):hover{background:#e7eddf;color:#254d35}}
+@media(max-width:760px){header #main-navigation>a:not(.profile-btn){display:flex;min-height:46px;margin-inline:0;padding:11px 13px;width:100%}}
