@@ -36,7 +36,8 @@ try{
     bookingButtons:s('#service-list .booking-link').map(rect),
     primaryButtons:s('button.primary, a.primary').filter(el=>rect(el).width>0).map(rect),
     offlineBanner:s('.catalog-source-note').map(el=>el.textContent),
-    font:window.getComputedStyle(document.querySelector('body')).fontFamily
+    font:window.getComputedStyle(document.querySelector('body')).fontFamily,
+    skipLinkHidden:(()=>{const el=document.querySelector('.skip-link');return !el||el.getBoundingClientRect().bottom<=0})()
    };
   });
   if(width===390||width===1440){
@@ -63,6 +64,7 @@ try{
   if(measures.productCount<1)issues.push('Products not rendered after outage');
   if(measures.bookingButtons.some(x=>x.width<108||x.height<40))issues.push('Catalog action under 108px wide or 40px tall');
   if((width===390||width===1440)&&measures.loadedPhotos<1)issues.push('DIKIDI gallery photo URLs fail to load; do not ship empty photo placeholders');
+  if(!measures.skipLinkHidden)issues.push('Skip navigation link overlays content without keyboard focus');
   if(errors.length)issues.push('Browser errors: '+errors.join('; '));
   evidence.push({width,...measures,errors,issues});
   if(issues.length)failed=true;
