@@ -106,3 +106,7 @@ header #main-navigation>a:not(.profile-btn)::after{display:none}
 @media(max-width:760px){.dikidi-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.dikidi-photo{border-radius:13px}.dikidi-photo figcaption{padding:9px;gap:5px;font-size:10px}.dikidi-photo figcaption a{font-size:10px}.review-source-rating{padding:13px 15px;font-size:13px}.review-source-rating>b{font-size:20px}.gallery-source{font-size:12px}.team-info button{font-size:13px}}
 @media(max-width:360px){.dikidi-gallery{gap:8px}.dikidi-photo figcaption{flex-wrap:wrap;align-items:flex-start}.dikidi-photo img{aspect-ratio:4/5}}
 @media(prefers-reduced-motion:reduce){.dikidi-photo{transition:none!important;transform:none!important}}
+
+/* Keep the accessibility skip link off canvas except for keyboard users. */
+.skip-link:not(:focus-visible){top:-140px!important;transform:none!important;opacity:0;pointer-events:none}
+.skip-link:focus-visible{top:8px!important;left:8px;transform:none;opacity:1;pointer-events:auto}
