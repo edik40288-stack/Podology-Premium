@@ -42,3 +42,26 @@ dialog{border:1px solid #d8e2cf;border-radius:23px;box-shadow:0 30px 100px #1c3d
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 .direction-icon{display:inline-block;vertical-align:middle;flex-shrink:0}.primary>span:has(.direction-icon){display:inline-flex;align-items:center}.booking-link .direction-icon{margin-left:6px}.cert-item>span:last-child{display:inline-flex;align-items:center}.card-bottom b .direction-icon{width:17px;height:17px}
+
+/* Catalogue action alignment and mobile navigation refinement, 2026-11-15. */
+.service{grid-template-columns:32px minmax(0,1fr) 74px 112px minmax(138px,max-content);column-gap:14px}
+.service>div{min-width:0}
+.service>.booking-link{width:auto;height:auto;min-width:138px;min-height:44px;display:inline-flex;justify-content:center;align-items:center;gap:7px;justify-self:end;padding:10px 15px;white-space:nowrap;text-align:center;line-height:1.45;box-shadow:0 2px 6px #315c4008}
+.service>.booking-link svg{flex-shrink:0}
+.catalog-footer .minor-link{padding:10px 0;font-size:13px;line-height:1.5;font-weight:650}
+.catalog .tabs button[aria-pressed="true"]{color:#284d33}
+@media(hover:hover){.service>.booking-link:hover{background:#d8e7cc;border-color:#86a87a;box-shadow:0 5px 13px #315c401a;transform:translateY(-1px)}}
+@media(min-width:761px) and (max-width:1100px){.service{grid-template-columns:25px minmax(0,1fr) 66px 100px minmax(124px,max-content);gap:10px}.service>.booking-link{min-width:124px;padding-inline:11px}}
+@media(max-width:760px){
+ #main-navigation{display:flex;visibility:hidden;opacity:0;transform:translateY(-10px);pointer-events:none;box-shadow:0 14px 24px #23432910;transition:opacity 220ms var(--ui-ease),transform 220ms var(--ui-ease),visibility 220ms}
+ #main-navigation.open{visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto}
+ .service{grid-template-columns:minmax(0,1fr) auto;column-gap:14px;row-gap:8px;padding-block:19px}
+ .service>div{grid-column:1;grid-row:1;align-self:center}
+ .service .duration{grid-column:1;grid-row:2;align-self:center}
+ .service .price{grid-column:2;grid-row:1;justify-self:end;align-self:center;white-space:nowrap;text-align:right}
+ .service>.booking-link{grid-column:2;grid-row:2;justify-self:end;min-width:124px;min-height:44px;padding:9px 12px;font-size:12px}
+ .service>.booking-link .direction-icon{width:15px;height:15px}
+ .catalog-footer{row-gap:14px}
+}
+@media(max-width:380px){.service{column-gap:9px}.service>.booking-link{min-width:114px;padding:9px 9px}.service .price{font-size:12px}}
+@media(prefers-reduced-motion:reduce){#main-navigation,.service>.booking-link{transition:none!important;transform:none!important}}
