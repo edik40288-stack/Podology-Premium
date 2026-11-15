@@ -51,7 +51,7 @@ function renderServices() {
         </div>
         <span class="duration">${escapeHTML(s.duration)} мин</span>
         <span class="price">${s.floating ? 'от ' : ''}${money(s.price)}</span>
-        <button class="booking-link" aria-label="Записаться: ${escapeHTML(s.name)}" data-service="${escapeHTML(s.id)}">Записаться ↗</button>
+        <button class="booking-link" aria-label="Записаться: ${escapeHTML(s.name)}" data-service="${escapeHTML(s.id)}">Записаться <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
       </article>
     `).join('') || '<p class="empty">Услуга не найдена. Попробуйте другое название.</p>';
   }
@@ -97,7 +97,7 @@ function renderProducts() {
         <p>Профессиональный уход для домашнего применения. Наличие подтверждается в центре.</p>
         <div class="product-price">
           <b>${money(p.price)}</b>
-          <button class="booking-link" data-product="${escapeHTML(p.id)}">Заказать ↗</button>
+          <button class="booking-link" data-product="${escapeHTML(p.id)}">Заказать <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
         </div>
       </div>
     </article>
