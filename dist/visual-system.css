@@ -81,3 +81,28 @@ header #main-navigation>a:not(.profile-btn)::after{display:none}
 .catalog .service h3,.catalog .service .price{overflow-wrap:anywhere}
 @media(max-width:760px){.catalog-source-note{margin:14px 0;padding:13px 15px;font-size:12px}.product-price>.booking-link{font-size:12px}}
 @media(hover:hover){.service>a.booking-link:hover,.product-price>a.booking-link:hover{background:#deebd7;border-color:#99b98e;color:#244c30;text-decoration:none}}
+
+/* Verified DIKIDI gallery / price provenance pass, 2026-11-15 */
+.dikidi-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px;align-items:stretch}
+.dikidi-photo{min-width:0;margin:0;padding:0;background:#f8f9f4;border:1px solid #dfe8d6;border-radius:17px;overflow:hidden;box-shadow:0 5px 15px #29402e0b;transition:transform 230ms var(--ui-ease),box-shadow 230ms var(--ui-ease),border-color 230ms var(--ui-ease)}
+.dikidi-photo img{width:100%;height:auto;aspect-ratio:4/4.25;object-fit:cover;object-position:center;display:block;background:#e3e8dd}
+.dikidi-photo figcaption{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:11px 13px;color:#60765f;font-size:11px;line-height:1.4}
+.dikidi-photo figcaption a{font-weight:700;color:#3a6747;text-decoration:underline;text-decoration-color:#b6ccb3;text-underline-offset:4px;white-space:nowrap}
+.dikidi-photo.photo-unavailable{background:#eef3e9}
+.dikidi-photo.photo-unavailable img{visibility:hidden}
+.dikidi-photo.photo-unavailable:before{content:"Фото смотрите в DIKIDI";display:block;padding:15px;text-align:center;color:#5a7759;font-size:12px;font-weight:600;line-height:1.5}
+.gallery-source{margin-top:20px;color:#6a7b63;font-size:12px;line-height:1.8}
+.gallery-source a{color:#375b40;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.review-source-rating{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 0 22px;padding:14px 19px;border:1px solid #d5e5ca;border-radius:13px;background:#edf4e8;color:#355d40;text-decoration:none;font-size:14px;line-height:1.6}
+.review-source-rating>b{font-size:22px;font-weight:750;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.review-source-rating>span{font-weight:650}.review-source-rating>small{font-size:11px;color:#607d5a}
+.team-info h3{font-size:clamp(14px,1.25vw,18px);font-weight:680;line-height:1.45}
+.team-info p{font-size:12px;line-height:1.6}
+.team-info button{font-size:13px;min-height:42px;font-weight:700}
+.contact-links a{min-height:58px;font-size:14px;line-height:1.65}
+.contact-links small{font-size:10px;letter-spacing:.1em}
+@media(hover:hover){.dikidi-photo:hover{border-color:#bbd1b1;transform:translateY(-2px);box-shadow:0 10px 25px #29402e15}.review-source-rating:hover{background:#e3efda;border-color:#bfd6b4}}
+@media(max-width:1100px){.dikidi-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}}
+@media(max-width:760px){.dikidi-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.dikidi-photo{border-radius:13px}.dikidi-photo figcaption{padding:9px;gap:5px;font-size:10px}.dikidi-photo figcaption a{font-size:10px}.review-source-rating{padding:13px 15px;font-size:13px}.review-source-rating>b{font-size:20px}.gallery-source{font-size:12px}.team-info button{font-size:13px}}
+@media(max-width:360px){.dikidi-gallery{gap:8px}.dikidi-photo figcaption{flex-wrap:wrap;align-items:flex-start}.dikidi-photo img{aspect-ratio:4/5}}
+@media(prefers-reduced-motion:reduce){.dikidi-photo{transition:none!important;transform:none!important}}
