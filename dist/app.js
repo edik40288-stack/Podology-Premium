@@ -100,7 +100,7 @@ function renderProducts() {
         <p>Профессиональный уход для домашнего применения. Наличие подтверждается в центре.</p>
         <div class="product-price">
           <b>${money(p.price)}</b>
-          ${productsLive?`<button class="booking-link" data-product="${escapeHTML(p.id)}">Заказать <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>`:`<a class="booking-link" href="https://t.me/podologKUTSYTOY" target="_blank" rel="noopener noreferrer">Уточнить наличие <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>`}
+          ${productsLive&&p.confirmed&&p.available>0?`<button class="booking-link" data-product="${escapeHTML(p.id)}">Заказать <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>`:`<a class="booking-link" href="https://t.me/podologKUTSYTOY" target="_blank" rel="noopener noreferrer">Уточнить наличие <svg class="direction-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>`}
         </div>
       </div>
     </article>
