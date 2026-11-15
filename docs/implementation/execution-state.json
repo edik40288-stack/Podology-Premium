@@ -1,0 +1,38 @@
+{
+  "updatedAt": "2026-11-15T18:56:53.944230+00:00",
+  "status": "IMPLEMENTATION_READY_FOR_INTEGRATION_REVIEW",
+  "auditStatus": "AUDIT INCOMPLETE",
+  "sourceRequirements": 110,
+  "sourceFullAcceptance": {
+    "PASS": 0,
+    "FAIL": 0,
+    "NOT RUN": 110
+  },
+  "controlledTests": {
+    "pass": 246,
+    "fail": 0,
+    "skip": 0
+  },
+  "typecheck": "PASS",
+  "build": "PASS",
+  "websiteJavaScriptSyntax": "PASS",
+  "newLiveApiRun": "NOT RUN",
+  "browserE2E": "NOT RUN — user deferred full testing; earlier local Chromium sandbox blocker remains",
+  "externalDelivery": "NOT RUN — gateway credentials/provider not configured",
+  "loadChaos": "NOT RUN",
+  "branch": "implementation/comments-2026-11-15",
+  "baseHeads": {
+    "crm": "1bc5e0a792be7b6db761b129f63ddba9328397e0",
+    "site": "b74e340711943460cbc04970553d8c882c34995b"
+  },
+  "mainUntouched": {
+    "crm": "7d0e99d0b5bebcd6ab4ec54579aa1b39c623f727",
+    "site": "f1a4aeea5c83cb0ed4f11f497d1f797dc59fb292"
+  },
+  "remainingExternalDependencies": [
+    "Messaging gateway/model/SMS/R2/cron deployed integration",
+    "Explicit manager policies and target stock values",
+    "Current interior/product/team original photos"
+  ],
+  "firstNextAction": "Isolated deployed browser acceptance WEB-06/07/12 using real test SMS and website/CRM domains, then remaining 110-ID ledger"
+}

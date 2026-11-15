@@ -5,20 +5,24 @@ const $$ = s => document.querySelectorAll(s);
 const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money = n => Number(n).toLocaleString('ru-RU') + ' ₽';
 
-let services=[],products=[],category='Все',search='',showAll=false;
+let publicMedia=[],services=[],products=[],category='Все',search='',showAll=false;
 const categories=['Все','ПОДОЛОГИЯ','Педикюр и Маникюр ЭСТЕТИКА','Ногтевой Сервис'];
 const categoryLabels=['Все услуги','Подология','Эстетический уход','Ногтевой сервис'];
 const CRM_BASE=['localhost','127.0.0.1'].includes(location.hostname)?'http://127.0.0.1:8787':'https://podocare-center-crm.rainyplum10.chatgpt.site';
+let analyticsSession='';
+function track(event,step){try{analyticsSession=analyticsSession||sessionStorage.getItem('podology-analytics-session')||crypto.randomUUID().replace(/-/g,'');sessionStorage.setItem('podology-analytics-session',analyticsSession);navigator.sendBeacon(new URL('/api/analytics',CRM_BASE),new Blob([JSON.stringify({session:analyticsSession,event,step,surface:'website'})],{type:'text/plain'}))}catch{}}
+track('page_view');addEventListener('pagehide',()=>track('page_exit'));
 function clientPortal(section,param,value){
  let dialog=document.querySelector('#live-client-dialog');
  if(!dialog){dialog=document.createElement('dialog');dialog.id='live-client-dialog';dialog.className='live-client-dialog';dialog.innerHTML='<button type="button" class="primary" aria-label="Закрыть кабинет">Закрыть ×</button><iframe title="Защищённый кабинет клиента"></iframe><p>Если кабинет не открывается, <a target="_blank" rel="noopener">откройте его в отдельном окне</a>.</p>';document.body.append(dialog);dialog.querySelector('button').onclick=()=>dialog.close();dialog.addEventListener('close',()=>dialog.querySelector('iframe').src='about:blank');}
- const url=new URL('/client',CRM_BASE);if(param&&value!=null)url.searchParams.set(param,String(value));url.hash=section;
+ const url=new URL('/client',CRM_BASE);if(analyticsSession)url.searchParams.set('analyticsSession',analyticsSession);if(param&&value!=null)url.searchParams.set(param,String(value));url.hash=section;
  dialog.querySelector('iframe').src=url.href;dialog.querySelector('a').href=url.href;if(!dialog.open)dialog.showModal();
 }
-function openBooking(id){clientPortal('services','service',id)}
-function openOrder(id){clientPortal('products','product',id)}
-function openClientProfile(){clientPortal('overview')}
-function manageBookings(){clientPortal('visits')}
+function openBooking(id){track('service_open');clientPortal('services','service',id)}
+function openOrder(id){track('product_open');clientPortal('products','product',id)}
+function openCabinet(section='overview'){const url=new URL('/client',CRM_BASE);if(analyticsSession)url.searchParams.set('analyticsSession',analyticsSession);url.hash=section;window.location.assign(url.href)}
+function openClientProfile(){openCabinet('overview')}
+function manageBookings(){openCabinet('visits')}
 function closeBooking(){document.querySelector('#booking-dialog')?.close()}
 function closeOrder(){document.querySelector('#order-dialog')?.close()}
 function selectCategory(c) {
@@ -63,20 +67,28 @@ function chooseConsultation() {
 }
 
 // Certificates (WEB-17)
-function openCertificate(src, title) {
-  $('#certificate-image').src = src;
-  $('#certificate-title').textContent = title;
-  $('#certificate-dialog').showModal();
+const certificateScans={"IMG_8286.PNG": "assets/certificates/nail-house-013.jpg", "IMG_8272.PNG": "assets/certificates/orthonyxia-01100622.jpg", "IMG_8283.PNG": "assets/certificates/plantar-warts-01310522.jpg", "IMG_8284.PNG": "assets/certificates/prosthetics-01301122.jpg", "IMG_8288.PNG": "assets/certificates/onychomycosis-2023.jpg", "IMG_8292.PNG": "assets/certificates/wounds-10100823.jpg", "IMG_8281.PNG": "assets/certificates/podiafarm-pfnn-0823-342.jpg", "IMG_8285.PNG": "assets/certificates/kane-0000972.jpg"};
+function openCertificate(src,title){
+ const clean=certificateScans[src.split("/").pop()];if(!clean)return;
+ $("#certificate-title").textContent=title;const img=document.createElement("img");img.src=clean;img.alt=title;$("#certificate-viewport").replaceChildren(img);
+ $("#certificate-source-note").textContent="Оригинальный скан документа об обучении. Даты и содержание сохранены.";$("#certificate-dialog").showModal();
 }
 function closeCertificate() {
   $('#certificate-dialog').close();
 }
 
+const officialPortfolio=[{"kind": "results", "url": "assets/works/manicure-1.jpg", "title": "Маникюр — работа центра, пример 1", "local": true}, {"kind": "results", "url": "assets/works/manicure-2.jpg", "title": "Маникюр — работа центра, пример 2", "local": true}, {"kind": "results", "url": "assets/works/manicure-3.jpg", "title": "Маникюр — работа центра, пример 3", "local": true}, {"kind": "results", "url": "assets/works/manicure-4.jpg", "title": "Маникюр — работа центра, пример 4", "local": true}];
+function renderMedia(){
+ for(const [kind,selector] of [['interior','.space-section'],['results','#directions']]){
+  const section=document.querySelector(selector);if(!section)continue;let gallery=section.querySelector('.real-photo-gallery');if(!gallery){gallery=document.createElement('div');gallery.className='real-photo-gallery';section.append(gallery)}
+  gallery.replaceChildren(...[...officialPortfolio,...publicMedia].filter(m=>m.kind===kind).map(m=>{const figure=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');img.src=new URL(m.url,m.local?window.location.href:CRM_BASE);img.alt=m.title;img.loading='lazy';caption.textContent=m.title;figure.append(img,caption);return figure}));
+ }
+}
 function renderProducts() {
   $('#product-list').innerHTML = products.map((p, i) => `
     <article class="product-card">
       <div class="product-visual" role="img" aria-label="${escapeHTML(p.name)}">
-        <div class="bottle">✳</div>
+        ${publicMedia.some(m=>m.kind==='product'&&m.entity===p.id)?`<img src="${escapeHTML(new URL(publicMedia.find(m=>m.kind==='product'&&m.entity===p.id).url,CRM_BASE).href)}" alt="${escapeHTML(p.name)}" loading="lazy">`:'<div class="bottle">✳</div>'}
         <small>Оригинальный сертифицированный уход</small>
       </div>
       <div class="product-info">
@@ -125,6 +137,7 @@ async function loadCatalog() {
     const res = await fetch(new URL('/api/catalog', CRM_BASE));
     if (!res.ok) throw new Error();
     const data = await res.json();
+    publicMedia=Array.isArray(data.media)?data.media:[];renderMedia();
     if (Array.isArray(data.services) && data.services.length) services = data.services;
     if (Array.isArray(data.products) && data.products.length) products = data.products;
   } catch (e) {
@@ -140,3 +153,8 @@ async function loadCatalog() {
 }
 $('#search')?.addEventListener('input',e=>{search=e.target.value;renderServices()});
 loadCatalog();
+
+renderMedia();
+
+// The complete client cabinet remains a standalone application, as before registration.
+const cabinetLink=document.querySelector('#client-account');if(cabinetLink)cabinetLink.href=new URL('/client#overview',CRM_BASE).href;

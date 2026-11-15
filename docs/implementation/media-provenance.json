@@ -1,0 +1,115 @@
+{
+  "retrievedAt": "2026-11-15",
+  "method": "Original JPEG bytes from the centre public website; certificates matched by holder, subject and document number to supplied screenshots. No image retouching or generated content. Old address/prices not imported.",
+  "assets": [
+    {
+      "path": "dist/assets/certificates/nail-house-013.jpg",
+      "source": "https://static.tildacdn.com/tild3336-3461-4431-b531-393830356461/Scan_compressed_page.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "originalReference": "IMG_8286.PNG",
+      "sha256": "6d228ff434e1bb8fec85683b78faece814dd1742af81d0dd16f7bea7f06d9c76",
+      "kind": "certificate",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/certificates/orthonyxia-01100622.jpg",
+      "source": "https://static.tildacdn.com/tild3565-6466-4337-a261-633166343139/Scan_compressed_page.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "originalReference": "IMG_8272.PNG",
+      "sha256": "e03cdf4ddd065636e247642cdeb1930d54b3ccbb830cc1572a5b7fb5c11c8d6d",
+      "kind": "certificate",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/certificates/plantar-warts-01310522.jpg",
+      "source": "https://static.tildacdn.com/tild3131-6630-4634-b866-613233666332/Scan_compressed_page.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "originalReference": "IMG_8283.PNG",
+      "sha256": "e3c1ee0207c224b8089ef9f558ed1d6d03c4c4ecfcc46038c98e511eb893bd97",
+      "kind": "certificate",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/certificates/prosthetics-01301122.jpg",
+      "source": "https://static.tildacdn.com/tild3261-3837-4565-b964-363966656534/Scan_compressed_page.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "originalReference": "IMG_8284.PNG",
+      "sha256": "cc0fd4f758fb4bd5bc0d7c4a9e1a00de8790491a5c096c7dae6c0303c95b1684",
+      "kind": "certificate",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/certificates/onychomycosis-2023.jpg",
+      "source": "https://static.tildacdn.com/tild3032-3561-4162-b864-336133313830/Scan_compressed_page.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "originalReference": "IMG_8288.PNG",
+      "sha256": "18e1d33b29d54d99c1de01a80d0bf3093a7b67ef871ddacb435d96fa6c53b88e",
+      "kind": "certificate",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/certificates/wounds-10100823.jpg",
+      "source": "https://static.tildacdn.com/tild6165-6638-4664-b162-383363393835/Scan_compressed_page.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "originalReference": "IMG_8292.PNG",
+      "sha256": "8a8aead34fb9f0f7d74caeeac8e1e413078feaea8bece98c6be4e35319f54a03",
+      "kind": "certificate",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/certificates/podiafarm-pfnn-0823-342.jpg",
+      "source": "https://static.tildacdn.com/tild6433-3932-4238-b631-316463303135/Scan_compressed_page.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "originalReference": "IMG_8281.PNG",
+      "sha256": "f387e3440e157a960951185db7b7a9a1348361b153099e3ba65fea7f11ae92a2",
+      "kind": "certificate",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/certificates/kane-0000972.jpg",
+      "source": "https://static.tildacdn.com/tild3634-6238-4962-b834-653631623061/Scan_compressed_page.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "originalReference": "IMG_8285.PNG",
+      "sha256": "1688a2e621b941a3defd23521b02b5f4bc83d37569d1716dd587746292e87abf",
+      "kind": "certificate",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/works/manicure-1.jpg",
+      "source": "https://static.tildacdn.com/tild3239-6364-4835-b335-373265633364/4n9jmvkk4t.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "sha256": "1bd68029cceb37d3f802a0c2163afc4cbf721ed214ecb6c38f96abe7a041fc5a",
+      "kind": "portfolio",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/works/manicure-2.jpg",
+      "source": "https://static.tildacdn.com/tild3265-3063-4762-a430-396135653365/eda1f5d94v.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "sha256": "1f6c02590f13aae9c9e59ddbcd1a7de55c8a639ce97efb15cb2eb122e6a5607f",
+      "kind": "portfolio",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/works/manicure-3.jpg",
+      "source": "https://static.tildacdn.com/tild3962-3664-4931-b137-303136343962/ldvgcq53am.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "sha256": "15b1a1d2316bda035515a58cd9d7d7dde29050e36ea047aace2201f28c6e359b",
+      "kind": "portfolio",
+      "altered": false
+    },
+    {
+      "path": "dist/assets/works/manicure-4.jpg",
+      "source": "https://static.tildacdn.com/tild6365-3930-4138-a561-396135646461/4qd1m2q70r.jpg",
+      "sourcePage": "https://podologhovrino.ru/",
+      "sha256": "ba454e59fc4cfbdbe1d694f82ed2eb98ca7d7a40a8b12bfc2dabfcf117fc20ed",
+      "kind": "portfolio",
+      "altered": false
+    }
+  ],
+  "stillRequired": [
+    "Current premises interior photographs",
+    "Actual catalogue product photographs matched to SKU",
+    "Team portraits where absent"
+  ]
+}
