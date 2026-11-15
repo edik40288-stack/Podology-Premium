@@ -29,3 +29,34 @@ jobs:
         run: node --check dist/app.js
       - name: Test catalog outage, deep links and navigation state
         run: node --test tests/website-ui.test.mjs
+
+  visual-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact branch revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Node 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Start static preview
+        run: |
+          python3 -m http.server 4173 --directory dist --bind 127.0.0.1 >/tmp/site-visual-preview.log 2>&1 &
+          echo $! > /tmp/site-preview.pid
+          sleep 2
+      - name: Inspect desktop and mobile layouts
+        run: node tests/visual-snapshot.mjs
+      - name: Save browser screenshots and measurements
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: site-responsive-evidence
+          path: evidence/visual-preview/
+          if-no-files-found: warn
