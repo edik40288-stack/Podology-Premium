@@ -53,7 +53,7 @@ function fixture({api=null,failing=false}={}){
 
 test('website JS parses and static snapshots contain publishable reference rows',()=>{
   assert.doesNotThrow(()=>new vm.Script(js));
-  assert.ok(localServices.length>5);
+  assert.equal(localServices.length,99,'Expected 99 unique services from verified DIKIDI audit');
   assert.ok(localProducts.length>0);
   assert.ok(localServices.every(x=>x.id!=null&&typeof x.name==='string'&&Number.isFinite(x.price)));
 });
@@ -108,4 +108,30 @@ test('mobile menu toggle and close keep ARIA expanded state in sync',()=>{
   assert.equal(f.nodes.get('#main-navigation').classList.contains('open'),true);
   vm.runInContext('closeNavigation()',f.context);
   assert.equal(f.nodes.get('.menu').getAttribute('aria-expanded'),'false');
+});
+
+test('DIKIDI price revisions, four categories and zero-price consultation are consistent',()=>{
+ assert.equal(new Set(localServices.map(x=>String(x.id))).size,99);
+ assert.equal(new Set(localServices.map(x=>x.category)).size,4);
+ assert.equal(localServices.find(x=>String(x.id)==='19789766').price,5000);
+ assert.equal(localServices.find(x=>String(x.id)==='23006065').duration,80);
+ assert.equal(localServices.find(x=>String(x.id)==='23005974').duration,100);
+ assert.equal(localServices.find(x=>String(x.id)==='local-cito-daily-20261115').price,14000);
+ assert.equal(localServices.find(x=>String(x.id)==='local-podology-consult-60-20261115').price,1500);
+ assert.equal(localServices.filter(x=>x.price===0).length,1);
+ const f=fixture({api:{services:localServices,products:localProducts}});
+ const free=vm.runInContext("services.find(x=>x.price===0)?.id",f.context);
+ // The website uses the same ID for the free consultation after the rename.
+ assert.equal(free,undefined,'Fixture should load catalog first; no stale session data');
+});
+
+test('real photo gallery includes only attributed, explicitly provided DIKIDI image URLs',()=>{
+ const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
+ const images=[...html.matchAll(/<img[^>]+src="(https:\/\/f2\.dikidi\.ru\/[^"]+)"[^>]*>/g)].map(m=>m[1]);
+ assert.equal(images.length,11);
+ assert.equal(new Set(images).size,11);
+ assert.ok(html.includes('https://dikidi.net/ru/profile/centr_podologii_kucytoj_1711451'));
+ assert.ok(html.includes('Стасия'));
+ assert.ok(!html.includes('Фотографии и подробные профили дополним позже.'));
+ assert.ok(!html.includes('Ежедневно 10:00–21:00'));
 });
