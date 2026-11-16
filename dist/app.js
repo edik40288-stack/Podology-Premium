@@ -8,7 +8,7 @@ const money = n => Number(n).toLocaleString('ru-RU') + ' ₽';
 let publicMedia=[],services=[],products=[],category='Все',search='',showAll=false,servicesLive=false,productsLive=false;
 const categories=['Все','ПОДОЛОГИЯ','Ортопедические Стельки ЦИТО','Педикюр и Маникюр ЭСТЕТИКА','Ногтевой Сервис'];
 const categoryLabels=['Все услуги','Подология','Ортопедические стельки','Эстетический уход','Ногтевой сервис'];
-const CRM_BASE=['localhost','127.0.0.1'].includes(location.hostname)?'http://127.0.0.1:8787':'https://podocare-center-crm.rainyplum10.chatgpt.site';
+const CRM_BASE=location.hostname.endsWith('.trycloudflare.com')?location.origin:['localhost','127.0.0.1'].includes(location.hostname)?'http://127.0.0.1:8787':'https://podocare-center-crm.rainyplum10.chatgpt.site';
 let analyticsSession='';
 function track(event,step){try{analyticsSession=analyticsSession||sessionStorage.getItem('podology-analytics-session')||crypto.randomUUID().replace(/-/g,'');sessionStorage.setItem('podology-analytics-session',analyticsSession);navigator.sendBeacon(new URL('/api/analytics',CRM_BASE),new Blob([JSON.stringify({session:analyticsSession,event,step,surface:'website'})],{type:'text/plain'}))}catch{}}
 track('page_view');addEventListener('pagehide',()=>track('page_exit'));
