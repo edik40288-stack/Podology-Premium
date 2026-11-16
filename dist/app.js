@@ -82,9 +82,9 @@ function closeCertificate() {
 
 const officialPortfolio=[{"kind": "results", "url": "assets/works/manicure-1.jpg", "title": "Маникюр — работа центра, пример 1", "local": true}, {"kind": "results", "url": "assets/works/manicure-2.jpg", "title": "Маникюр — работа центра, пример 2", "local": true}, {"kind": "results", "url": "assets/works/manicure-3.jpg", "title": "Маникюр — работа центра, пример 3", "local": true}, {"kind": "results", "url": "assets/works/manicure-4.jpg", "title": "Маникюр — работа центра, пример 4", "local": true}];
 function renderMedia(){
- for(const [kind,selector] of [['interior','.space-section'],['results','#directions']]){
+ for(const [kind,selector] of [['interior','[data-published-media=interior]'],['results','[data-published-media=results]']]){
   const section=document.querySelector(selector);if(!section)continue;let gallery=section.querySelector('.real-photo-gallery');if(!gallery){gallery=document.createElement('div');gallery.className='real-photo-gallery';section.append(gallery)}
-  gallery.replaceChildren(...[...officialPortfolio,...publicMedia].filter(m=>m.kind===kind).map(m=>{const figure=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');img.src=new URL(m.url,m.local?window.location.href:CRM_BASE);img.alt=m.title;img.loading='lazy';caption.textContent=m.title;figure.append(img,caption);return figure}));
+  gallery.replaceChildren(...publicMedia.filter(m=>m.kind===kind).map(m=>{const figure=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');img.src=new URL(m.url,m.local?window.location.href:CRM_BASE);img.alt=m.title;img.loading='lazy';caption.textContent=m.title;figure.append(img,caption);return figure}));
  }
 }
 function renderProducts() {

@@ -1,0 +1,225 @@
+{
+  "sourceArchiveSha256": "c4026649c5a14748803dd44270cdd689350efc5003fbf6e570c33e8c492e7ae5",
+  "duplicatesExcluded": [
+    "ФОтки салона/н9.jpg"
+  ],
+  "panorama": "Deferred by owner; still photographs only",
+  "staff": {
+    "anastasia": "Анастасия — Мастер маникюра · эстетист; surname pending",
+    "seda": "Седа Григорьевна — Специалист по индивидуальным стелькам",
+    "elena": "Елена Малышева — Подолог",
+    "alexandra": "Александра Куцытой — Основатель центра · подолог-эстетист"
+  },
+  "assets": [
+    {
+      "source": "Сертификаты/с1.jpg",
+      "path": "dist/media/certificates/course-01.jpg",
+      "sha256": "7a4227c57b11b2e3d9f4b4c5ad647d4a47c0c6a269454cc51db6a30aded0cca5",
+      "title": "Раневой процесс · особенности ведения ран",
+      "group": "certificates"
+    },
+    {
+      "source": "Сертификаты/с2.jpg",
+      "path": "dist/media/certificates/course-02.jpg",
+      "sha256": "fac2002d150ed9b70670652d56f537e43dc131db402ece9316707356d6052ada",
+      "title": "Ортониксия · система 3ТО-ОМЕГА",
+      "group": "certificates"
+    },
+    {
+      "source": "Сертификаты/с3.jpg",
+      "path": "dist/media/certificates/course-03.jpg",
+      "sha256": "47d22647f6141aed7cba1861e8d8aa01722e23363bede501298bd6380ae771dd",
+      "title": "Израильский педикюр KART",
+      "group": "certificates"
+    },
+    {
+      "source": "Сертификаты/с4.jpg",
+      "path": "dist/media/certificates/course-04.jpg",
+      "sha256": "bc398af32442301dd0512b59be2004dc4ddd644e00c3bde70e565fbd611f7e91",
+      "title": "Ортониксия · титановая нить",
+      "group": "certificates"
+    },
+    {
+      "source": "Сертификаты/с5.jpg",
+      "path": "dist/media/certificates/course-05.jpg",
+      "sha256": "2431bc4a00f379421b687a1a23b8d8b7f424b01ec74dfc68b5fc0aab6a0c90c2",
+      "title": "Работа с онихомикозом в подологии",
+      "group": "certificates"
+    },
+    {
+      "source": "Сертификаты/с6.jpg",
+      "path": "dist/media/certificates/course-06.jpg",
+      "sha256": "d497be936efc8efb6bdb67fcb5265e12c41aa3f90310a7c39b96d3e80c93c2ae",
+      "title": "Изготовление индивидуальных ортезов и съёмных бандажей",
+      "group": "certificates"
+    },
+    {
+      "source": "Сертификаты/с7.jpg",
+      "path": "dist/media/certificates/course-07.jpg",
+      "sha256": "453e8e0a484445fddd5dd457dce9963955bde60a9db2fa2022cf49682bb83d36",
+      "title": "Введение в подологию · титановая нить",
+      "group": "certificates"
+    },
+    {
+      "source": "Сертификаты/с8.jpg",
+      "path": "dist/media/certificates/course-08.jpg",
+      "sha256": "5740c186be7c10a3c2bcde556b7b9cf5cfdd48cc67214930bbf3a47f997cbe58",
+      "title": "Протезирование ногтей",
+      "group": "certificates"
+    },
+    {
+      "source": "Сертификаты/с9.jpg",
+      "path": "dist/media/certificates/course-09.jpg",
+      "sha256": "6a2c94557b7fccec24669d33cf5e4a075efd66d2f5940a0755cb8a7b3cbe68d0",
+      "title": "Подошвенные бородавки в практике подолога",
+      "group": "certificates"
+    },
+    {
+      "source": "Маникюр/м1.jpg",
+      "path": "dist/media/works/manicure-1.jpg",
+      "sha256": "e14eaf66ed1040df4b739285dced4a8cdb743714a2492152e54b724451788ae5",
+      "title": "Маникюр · работа 1",
+      "group": "manicure"
+    },
+    {
+      "source": "Маникюр/м2.jpg",
+      "path": "dist/media/works/manicure-2.jpg",
+      "sha256": "713915dfc5c5a0c9c5f6d725fd3e6919f9ca6395bdac9a6119c0fbfd9374455b",
+      "title": "Маникюр · работа 2",
+      "group": "manicure"
+    },
+    {
+      "source": "Маникюр/м3.jpg",
+      "path": "dist/media/works/manicure-3.jpg",
+      "sha256": "d0ce1f51e237a34440c9495021d5e352108de2a38f07f23f60d860cbcd969e20",
+      "title": "Маникюр · работа 3",
+      "group": "manicure"
+    },
+    {
+      "source": "Маникюр/м4.jpg",
+      "path": "dist/media/works/manicure-4.jpg",
+      "sha256": "be08655747c6582f175e97c155c498474561e06b0db55928be8ce2043063b118",
+      "title": "Маникюр · работа 4",
+      "group": "manicure"
+    },
+    {
+      "source": "Маникюр/м5.jpg",
+      "path": "dist/media/works/manicure-5.jpg",
+      "sha256": "a9af943f7e1bf94a5755d07304959861e44f05cdaea7c91eee41ff121021d723",
+      "title": "Маникюр · работа 5",
+      "group": "manicure"
+    },
+    {
+      "source": "Маникюр/м6.jpg",
+      "path": "dist/media/works/manicure-6.jpg",
+      "sha256": "64daba75d9ac55e86780789fbd41a20158da110348c1d837a824cfd0d3896ba1",
+      "title": "Маникюр · работа 6",
+      "group": "manicure"
+    },
+    {
+      "source": "ПОдология/п1.jpg",
+      "path": "dist/media/works/podology-1.jpg",
+      "sha256": "95c42fa232e9d4cd76ae57a57b25ce776f0a52e5335dac969c0f1a54e19e6dae",
+      "title": "Подологический уход · работа 1",
+      "group": "podology"
+    },
+    {
+      "source": "ПОдология/п2.jpg",
+      "path": "dist/media/works/podology-2.jpg",
+      "sha256": "453135bd56bf9f73b117f14abf76b28d19f7992db3fc946164644fc1fdf57cb1",
+      "title": "Подологический уход · работа 2",
+      "group": "podology"
+    },
+    {
+      "source": "ПОдология/п3.jpg",
+      "path": "dist/media/works/podology-3.jpg",
+      "sha256": "67f24de157ac8da53b54b044e0d9b092840f0bb9df555c53a8c4e08eba6745b9",
+      "title": "Подологический уход · работа 3",
+      "group": "podology"
+    },
+    {
+      "source": "ПОдология/п4.jpg",
+      "path": "dist/media/works/podology-4.jpg",
+      "sha256": "2c3e38a1ef9d2857041c2d65f827363a3bbe13d7265bb59824cf31c19bc4927e",
+      "title": "Подологический уход · работа 4",
+      "group": "podology"
+    },
+    {
+      "source": "ПОдология/п6.jpg",
+      "path": "dist/media/works/podology-6.jpg",
+      "sha256": "9fae5f177b51a5663bf74e206e0cabe90904010a9bca1add191c541edf948847",
+      "title": "Подологический уход · работа 6",
+      "group": "podology"
+    },
+    {
+      "source": "ПОдология/п7.jpg",
+      "path": "dist/media/works/podology-7.jpg",
+      "sha256": "2d964038954dbd3b9d2c53b60db56972479e3aaae90abe2b0d79bda158b84d14",
+      "title": "Подологический уход · работа 7",
+      "group": "podology"
+    },
+    {
+      "source": "ПОдология/п8.jpg",
+      "path": "dist/media/works/podology-8.jpg",
+      "sha256": "a0041b1eb0bf416e9da6a53ea838c7d845b70cf958fa1c3bedf0f062bbefc663",
+      "title": "Подологический уход · работа 8",
+      "group": "podology"
+    },
+    {
+      "source": "ФОтки салона/н1.jpg",
+      "path": "dist/media/salon/photo-01.jpg",
+      "sha256": "38088cebf81272c66e6f4c2ec579d3a3591215e0ed5220cfa5e39bca73609cc9",
+      "title": "Вход в центр вечером",
+      "group": "salon"
+    },
+    {
+      "source": "ФОтки салона/н2.jpg",
+      "path": "dist/media/salon/photo-02.jpg",
+      "sha256": "b6bbeafefcd6581fcb19898b413cfb0c89f3e622808485d0db160e02d2f9f54b",
+      "title": "Кабинет ухода",
+      "group": "salon"
+    },
+    {
+      "source": "ФОтки салона/н4.jpg",
+      "path": "dist/media/salon/photo-03.jpg",
+      "sha256": "25a900a37db87601f08f527a7a36ba0d50c1ddc5c115f2b36aba93f6a5a77fbe",
+      "title": "Ресепшен",
+      "group": "salon"
+    },
+    {
+      "source": "ФОтки салона/н5.jpg",
+      "path": "dist/media/salon/photo-04.jpg",
+      "sha256": "17ee92c9417d6dd18c3ff24281d8b743b848b2a0e1f9ffcfa86778d261102d60",
+      "title": "Добро пожаловать в центр",
+      "group": "salon"
+    },
+    {
+      "source": "ФОтки салона/н6.jpg",
+      "path": "dist/media/salon/photo-05.jpg",
+      "sha256": "6e433b68432397477fd06f07c2baa881039bcbd9135e88ae7ae623bf3cd89831",
+      "title": "Пространство центра",
+      "group": "salon"
+    },
+    {
+      "source": "ФОтки салона/н7.jpg",
+      "path": "dist/media/salon/photo-06.jpg",
+      "sha256": "b735208f8b3d7c75aba69a8f459586831fb24e169a3b2fefcbc82da853b7d632",
+      "title": "Зона маникюра",
+      "group": "salon"
+    },
+    {
+      "source": "ФОтки салона/н8.jpg",
+      "path": "dist/media/salon/photo-07.jpg",
+      "sha256": "bd1dd07cc2bf556c16617d621a2c38b050d4b0a68f4bf7e1e840d344f25bbdfb",
+      "title": "Зона встречи гостей",
+      "group": "salon"
+    },
+    {
+      "source": "ФОтки салона/т3.jpg",
+      "path": "dist/media/salon/photo-08.jpg",
+      "sha256": "aa54748caf2f2266989305b40f0da5347219b774ced8d25f571361bdd887a467",
+      "title": "Кабинет подологического ухода",
+      "group": "salon"
+    }
+  ]
+}
