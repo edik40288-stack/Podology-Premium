@@ -30,6 +30,8 @@ try{
     documentWidth:document.documentElement.scrollWidth,
     serviceCount:s('#service-list .service').length,
     productCount:s('#product-list .product-card').length,
+    staffPortraits:s('#team img.staff-portrait').length,
+    loadedStaffPortraits:s('#team img.staff-portrait').filter(img=>img.complete&&img.naturalWidth>0).length,
     sourcePhotos:s('.dikidi-photo img').length,
     loadedPhotos:s('.dikidi-photo img').filter(img=>img.complete&&img.naturalWidth>0).length,
     brokenPhotos:s('.dikidi-photo img').filter(img=>img.complete&&img.naturalWidth===0).length,
@@ -41,6 +43,12 @@ try{
    };
   });
   if(width===390||width===1440){
+   const staffPhotos=page.locator('#team .staff-portrait');
+   for(let index=0;index<await staffPhotos.count();index++){
+     await staffPhotos.nth(index).scrollIntoViewIfNeeded();
+     await staffPhotos.nth(index).evaluate(async(img)=>{try{await img.decode()}catch{}});
+   }
+   await page.locator('#team').screenshot({path:`${out}/team-${width}.png`,animations:'disabled'});
    const photos=page.locator('#gallery .dikidi-photo img');
    for(let index=0;index<await photos.count();index++){
      await photos.nth(index).scrollIntoViewIfNeeded();
@@ -63,7 +71,10 @@ try{
   if(measures.serviceCount<1)issues.push('Services not rendered after outage');
   if(measures.productCount<1)issues.push('Products not rendered after outage');
   if(measures.bookingButtons.some(x=>x.width<108||x.height<40))issues.push('Catalog action under 108px wide or 40px tall');
-  if((width===390||width===1440)&&measures.loadedPhotos<1)issues.push('DIKIDI gallery photo URLs fail to load; do not ship empty photo placeholders');
+  if((width===390||width===1440)&&measures.staffPortraits!==2)issues.push('Verified staff portraits not both rendered');
+  if((width===390||width===1440)&&measures.loadedStaffPortraits!==2)issues.push('DIKIDI staff portrait images did not load');
+  if((width===390||width===1440)&&measures.sourcePhotos!==9)issues.push('Nine works must be separate from two staff portraits');
+  if((width===390||width===1440)&&measures.loadedPhotos!==9)issues.push('Some DIKIDI portfolio images did not load');
   if(!measures.skipLinkHidden)issues.push('Skip navigation link overlays content without keyboard focus');
   if(errors.length)issues.push('Browser errors: '+errors.join('; '));
   evidence.push({width,...measures,errors,issues});
