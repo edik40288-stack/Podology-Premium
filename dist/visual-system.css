@@ -129,3 +129,17 @@ header #main-navigation>a:not(.profile-btn)::after{display:none}
 @media(max-width:1100px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
 @media(max-width:530px){.team-grid{grid-template-columns:1fr;gap:18px}.team-card{display:grid;grid-template-columns:minmax(105px,36%) minmax(0,1fr);align-items:stretch}.team-card .portrait-placeholder{height:100%;min-height:220px!important;aspect-ratio:auto;border-radius:16px 0 0 16px}.team-card .team-info{padding:15px 13px}.team-card .team-info h3{font-size:16px}.team-card .team-description{font-size:12px;line-height:1.55;min-height:0}.team-card .team-role{font-size:10px}.team-card .team-actions{padding-top:9px}.team-card .team-actions .inline{min-height:42px}}
 @media(max-width:350px){.team-card{grid-template-columns:minmax(0,1fr)}.team-card .portrait-placeholder{height:220px;min-height:220px!important;border-radius:16px 16px 0 0}}
+
+/* Four truthful service directions from verified DIKIDI list. */
+#directions .direction-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+#directions .direction{padding:23px;min-height:410px;border:1px solid #dce4d4}
+#directions .direction h3{font-size:clamp(20px,2vw,27px);line-height:1.25;overflow-wrap:break-word}
+#directions .direction p{font-size:12px;line-height:1.75}
+#directions .direction .card-number{font-size:10px;letter-spacing:.1em;line-height:1.45}
+#directions .direction .card-bottom{font-size:12px;font-weight:700}
+#directions .orthopedics{background:#e7eee5}
+#directions .orthopedics:hover{background:#e7eee5}
+#directions .insoles{display:flex;justify-content:center;align-items:center;min-height:168px;margin:20px 0 10px;color:#8aa57f}
+#directions .insoles span{font:110px/1 Georgia,serif;letter-spacing:-.18em;transform:rotate(-12deg)}
+@media(max-width:1120px){#directions .direction-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}#directions .direction{min-height:380px}}
+@media(max-width:640px){#directions .direction-grid{grid-template-columns:1fr;gap:14px}#directions .direction{min-height:0;padding:23px}#directions .insoles{min-height:110px;margin:7px 0 6px}#directions .insoles span{font-size:86px}}
