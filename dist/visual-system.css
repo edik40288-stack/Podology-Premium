@@ -238,3 +238,11 @@ header #main-navigation>a:not(.profile-btn)::after{display:none}
  .service .price{max-width:106px;font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){#main-navigation{transition:none!important}}
+
+/* A phone already has a safe-area-aware fixed booking CTA; do not show a
+   duplicate booking button in the tiny header. Keep one clear action. */
+@media(max-width:760px){
+ header .nav-cta{display:none}
+ header .brand{flex:1 1 auto}
+ header .menu{margin-left:auto}
+}
