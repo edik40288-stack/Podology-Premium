@@ -246,3 +246,37 @@ header #main-navigation>a:not(.profile-btn)::after{display:none}
  header .brand{flex:1 1 auto}
  header .menu{margin-left:auto}
 }
+
+
+/* Readable phone-first text and visual hierarchy 2026-11-16 */
+:root{
+ --site-readable:#4b614f;
+ --site-action:#315c40;
+ --site-focus:#4b7954;
+}
+#services .service .price{font-variant-numeric:tabular-nums}
+#services .service h3{font-weight:700}
+button:focus-visible,a:focus-visible,input:focus-visible{
+ outline:3px solid var(--site-focus);outline-offset:3px
+}
+@media(max-width:760px){
+ body{font-size:16px;line-height:1.65;
+  font-family:Manrope,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif
+ }
+ .hero .eyebrow{font-size:11px;color:var(--site-readable)}
+ .hero .lead{font-size:16px;line-height:1.65;color:#49604d}
+ .hero-note{color:#4b624f}
+ .section-head h2{font-weight:700;letter-spacing:-.03em}
+ .section-head p,.direction p,.team-description{font-size:14px;line-height:1.65;color:#4b624f}
+ #category-tabs button{font-size:14px;min-height:46px}
+ .service h3{font-size:16px}
+ .service .duration{font-size:13px;color:#536851}
+ .service .price{font-size:15px;font-weight:750;color:#264832}
+ .service>.booking-link{font-size:15px;min-height:48px;font-weight:750}
+ #directions .direction .card-bottom{font-size:14px}
+ .team-card .team-description{font-size:14px}
+ .team-card .team-rating{font-size:13px}
+ .review-card blockquote{font-size:19px;line-height:1.55}
+ .contact p,.contact-links a{font-size:15px}
+ .mobile-book{min-height:54px;font-size:15px;font-weight:750}
+}
