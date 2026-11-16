@@ -1,0 +1,68 @@
+{
+  "source": "https://dikidi.net/ru/profile/centr_podologii_kucytoj_1711451",
+  "verifiedAt": "2026-11-16",
+  "center": {
+    "name": "Центр подологии Куцытой",
+    "address": "Москва, Петрозаводская ул., 28, корп. 1",
+    "phone": "+79850592777",
+    "whatsapp": "https://wa.me/79850592777",
+    "hours": null,
+    "rating": 5,
+    "ratingCount": 145,
+    "writtenReviews": 8
+  },
+  "staff": [
+    {
+      "id": "3685963",
+      "name": "Александра Куцытой",
+      "role": "Подолог-эстетист · основатель",
+      "description": "Более пяти лет практики. Подологический уход за стопами и ногтями, работа с проблемными ногтевыми пластинами, профилактика и подбор индивидуального ухода.",
+      "photo": null,
+      "rating": 5,
+      "ratingCount": 124,
+      "crmId": "alex"
+    },
+    {
+      "id": "4510827",
+      "name": "Седа",
+      "displayNameOnDikidi": "Григорьевна Седа",
+      "role": "Врач-ортопед",
+      "description": "Изготовление индивидуальных ортопедических стелек. Работает в этом направлении с 1998 года.",
+      "photo": null,
+      "rating": null,
+      "ratingCount": 0,
+      "crmId": "seda"
+    },
+    {
+      "id": "4587677",
+      "name": "Елена Малышева",
+      "role": "Подолог",
+      "description": null,
+      "photo": "https://f2.dikidi.ru/c28/v27732/2tlgjk0tgi.jpg",
+      "rating": 5,
+      "ratingCount": 1,
+      "crmId": "elena"
+    },
+    {
+      "id": "4672311",
+      "name": "Стасия",
+      "role": "Мастер ногтевого сервиса",
+      "description": null,
+      "photo": "https://f2.dikidi.ru/c51/v50347/39eegjsuoh.jpg",
+      "rating": 5,
+      "ratingCount": 2,
+      "crmId": null
+    }
+  ],
+  "portfolio": [
+    "https://f2.dikidi.ru/c17/v16572/75f65qgg54.jpg",
+    "https://f2.dikidi.ru/c17/v16572/2bblmlb6a4.jpg",
+    "https://f2.dikidi.ru/c16/v15258/4qd1m2q70r.jpg",
+    "https://f2.dikidi.ru/c16/v15254/1vn7he5dfm.jpg",
+    "https://f2.dikidi.ru/c16/v15254/7e935engsj.jpg",
+    "https://f2.dikidi.ru/c16/v15254/4n9jmvkk4t.jpg",
+    "https://f2.dikidi.ru/c16/v15254/ldvgcq53am.jpg",
+    "https://f2.dikidi.ru/c16/v15254/1ijjvu727f.jpg",
+    "https://f2.dikidi.ru/c16/v15254/eda1f5d94v.jpg"
+  ]
+}
