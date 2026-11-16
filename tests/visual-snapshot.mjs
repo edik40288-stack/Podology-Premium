@@ -19,7 +19,8 @@ try{
   // Browser screenshots normally do not scroll through lazy-loaded photos.
   // Explicitly request media to verify the DIKIDI CDN instead of accepting blank cards.
   if(width===390||width===1440){
-    await page.evaluate(()=>document.querySelectorAll('.dikidi-photo img').forEach(img=>{img.loading='eager'}));
+    await page.evaluate(()=>document.querySelectorAll('.dikidi-photo img, #team img.staff-portrait').forEach(img=>{img.loading='eager'}));
+    await page.waitForFunction(()=>[...document.querySelectorAll('#team img.staff-portrait')].every(img=>img.complete&&img.naturalWidth>0),null,{timeout:25000}).catch(()=>{});
     await page.waitForFunction(()=>[...document.querySelectorAll('.dikidi-photo img')].every(img=>img.complete),null,{timeout:20000}).catch(()=>{});
   }
   const measures=await page.evaluate(()=>{
