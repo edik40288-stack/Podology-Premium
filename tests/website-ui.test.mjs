@@ -129,6 +129,12 @@ test('real photo gallery includes only attributed, explicitly provided DIKIDI im
  const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
  const images=[...html.matchAll(/<img[^>]+src="(https:\/\/f2\.dikidi\.ru\/[^"]+)"[^>]*>/g)].map(m=>m[1]);
  assert.equal(images.length,11);
+ assert.equal((html.match(/class="dikidi-photo"/g)||[]).length,9,'Nine actual portfolio images, no staff portraits in portfolio');
+ assert.equal((html.match(/class="staff-portrait"/g)||[]).length,2,'Two precisely attributed staff portraits');
+ assert.ok(html.includes('Елена Малышева')&&html.includes('Стасия'));
+ assert.ok(html.includes('Врач-ортопед'));
+ assert.ok(!html.includes('Стасия</h3><p>Мастер ногтевого сервиса</p>')); // Cards now have descriptions and roles.
+
  assert.equal(new Set(images).size,11);
  assert.ok(html.includes('https://dikidi.net/ru/profile/centr_podologii_kucytoj_1711451'));
  assert.ok(html.includes('Стасия'));
