@@ -110,3 +110,22 @@ header #main-navigation>a:not(.profile-btn)::after{display:none}
 /* Keep the accessibility skip link off canvas except for keyboard users. */
 .skip-link:not(:focus-visible){top:-140px!important;transform:none!important;opacity:0;pointer-events:none}
 .skip-link:focus-visible{top:8px!important;left:8px;transform:none;opacity:1;pointer-events:auto}
+
+/* Verified named staff portraits, DIKIDI 2026-11-16 */
+.team-card{min-width:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid #dfe7d8;background:#fafbf7;border-radius:18px}
+.team-card .portrait-placeholder{border-radius:17px 17px 0 0;aspect-ratio:4/4.25;min-height:0!important;position:relative;isolation:isolate}
+.team-card .portrait-placeholder:before{z-index:1;pointer-events:none}
+.team-card .portrait-placeholder .staff-portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:2;display:block}
+.team-card .portrait-with-photo:has(.staff-portrait:not([hidden])) .portrait-monogram{opacity:0}
+.team-card .portrait-photo-missing .portrait-monogram{opacity:1}
+.team-card .team-info{padding:20px;display:flex;flex:1;flex-direction:column;align-items:flex-start}
+.team-card .team-role{font-size:11px;letter-spacing:.04em;line-height:1.5;font-weight:750;color:#64845f;margin-bottom:6px}
+.team-card .team-info h3{font-size:18px;line-height:1.4;font-weight:700;margin:0 0 9px;color:#293e2f}
+.team-card .team-description{font-size:12px;line-height:1.7;color:#566955;margin-bottom:12px;min-height:4.2em}
+.team-card .team-rating{display:inline-flex;align-items:center;font-size:12px;line-height:1.5;color:#587a4d;background:#edf4e7;padding:6px 10px;border-radius:9px}
+.team-card .team-actions{display:flex;flex-wrap:wrap;gap:9px 15px;align-items:center;margin-top:auto;padding-top:16px}
+.team-card .team-actions .inline{font-size:12px;font-weight:750;min-height:44px}
+.team-card .team-actions a{font-size:12px;color:#41684b;line-height:1.5;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:1100px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+@media(max-width:530px){.team-grid{grid-template-columns:1fr;gap:18px}.team-card{display:grid;grid-template-columns:minmax(105px,36%) minmax(0,1fr);align-items:stretch}.team-card .portrait-placeholder{height:100%;min-height:220px!important;aspect-ratio:auto;border-radius:16px 0 0 16px}.team-card .team-info{padding:15px 13px}.team-card .team-info h3{font-size:16px}.team-card .team-description{font-size:12px;line-height:1.55;min-height:0}.team-card .team-role{font-size:10px}.team-card .team-actions{padding-top:9px}.team-card .team-actions .inline{min-height:42px}}
+@media(max-width:350px){.team-card{grid-template-columns:minmax(0,1fr)}.team-card .portrait-placeholder{height:220px;min-height:220px!important;border-radius:16px 16px 0 0}}
