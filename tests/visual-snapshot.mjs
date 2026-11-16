@@ -72,10 +72,10 @@ try{
   if(measures.serviceCount<1)issues.push('Services not rendered after outage');
   if(measures.productCount<1)issues.push('Products not rendered after outage');
   if(measures.bookingButtons.some(x=>x.width<108||x.height<40))issues.push('Catalog action under 108px wide or 40px tall');
-  if((width===390||width===1440)&&measures.staffPortraits!==2)issues.push('Verified staff portraits not both rendered');
-  if((width===390||width===1440)&&measures.loadedStaffPortraits!==2)issues.push('DIKIDI staff portrait images did not load');
-  if((width===390||width===1440)&&measures.sourcePhotos!==9)issues.push('Nine works must be separate from two staff portraits');
-  if((width===390||width===1440)&&measures.loadedPhotos!==9)issues.push('Some DIKIDI portfolio images did not load');
+  if((width===390||width===1440)&&measures.staffPortraits!==4)issues.push('Four verified staff portraits must render');
+  if((width===390||width===1440)&&measures.loadedStaffPortraits!==4)issues.push('DIKIDI staff portrait images did not load');
+  if((width===390||width===1440)&&measures.sourcePhotos!==13)issues.push('Thirteen work photos must be separate from staff portraits');
+  if((width===390||width===1440)&&measures.loadedPhotos!==13)issues.push('Some DIKIDI portfolio images did not load');
   if(!measures.skipLinkHidden)issues.push('Skip navigation link overlays content without keyboard focus');
   if(errors.length)issues.push('Browser errors: '+errors.join('; '));
   evidence.push({width,...measures,errors,issues});
