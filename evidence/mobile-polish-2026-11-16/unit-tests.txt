@@ -1,0 +1,16 @@
+✔ website JS parses and static snapshots contain publishable reference rows (2.068758ms)
+✔ outage falls back to clearly labelled, read-only services/products (25.680674ms)
+✔ live booking uses full portal page and retains requested service (3.036042ms)
+✔ only confirmed available live products can be ordered (3.069532ms)
+✔ mobile menu toggle and close keep ARIA expanded state in sync (2.18998ms)
+✔ DIKIDI price revisions, four categories and zero-price consultation are consistent (3.30804ms)
+✔ owner-provided galleries preserve original files, staff identity and non-medical titles (31.560147ms)
+✔ all four DIKIDI categories are visible in site navigation (1.077188ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 213.104893

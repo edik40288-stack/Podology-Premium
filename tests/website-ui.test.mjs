@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
+import {createHash} from 'node:crypto';
 
 const js=readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
 const localServices=JSON.parse(readFileSync(new URL('../dist/services.json',import.meta.url),'utf8'));
@@ -125,19 +126,28 @@ test('DIKIDI price revisions, four categories and zero-price consultation are co
  assert.equal(new URL(f.navigations[0]).searchParams.get('service'),'22883627','Free consultation ID must remain stable');
 });
 
-test('real photo gallery includes only attributed, explicitly provided DIKIDI image URLs',()=>{
+test('owner-provided galleries preserve original files, staff identity and non-medical titles',()=>{
  const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
- const images=[...html.matchAll(/<img[^>]+src="(https:\/\/f2\.dikidi\.ru\/[^"]+)"[^>]*>/g)].map(m=>m[1]);
- assert.equal(images.length,11);
- assert.equal((html.match(/class="dikidi-photo"/g)||[]).length,9,'Nine actual portfolio images, no staff portraits in portfolio');
- assert.equal((html.match(/class="staff-portrait"/g)||[]).length,2,'Two precisely attributed staff portraits');
- assert.ok(html.includes('Елена Малышева')&&html.includes('Стасия'));
- assert.ok(html.includes('Врач-ортопед'));
- assert.ok(!html.includes('Стасия</h3><p>Мастер ногтевого сервиса</p>')); // Cards now have descriptions and roles.
-
- assert.equal(new Set(images).size,11);
- assert.ok(html.includes('https://dikidi.net/ru/profile/centr_podologii_kucytoj_1711451'));
- assert.ok(html.includes('Стасия'));
+ const manifest=JSON.parse(readFileSync(new URL('../docs/implementation/photo-import-2026-11-16.json',import.meta.url),'utf8'));
+ assert.equal(manifest.assets.length,30);
+ assert.equal(new Set(manifest.assets.map(x=>x.path)).size,30);
+ for(const item of manifest.assets){
+  assert.ok(item.path.startsWith('dist/media/'));
+  assert.ok(!item.path.includes('..'));
+  assert.ok(html.includes('href="'+item.path.slice(5)+'"'));
+  const data=readFileSync(new URL('../'+item.path,import.meta.url));
+  assert.equal(createHash('sha256').update(data).digest('hex'),item.sha256,'Original photograph must match its provenance');
+ }
+ const groups=Object.fromEntries(['manicure','podology','salon','certificates'].map(group=>[group,manifest.assets.filter(x=>x.group===group).length]));
+ assert.deepEqual(groups,{manicure:6,podology:7,salon:8,certificates:9});
+ for(const [file,name] of [['alexandra','Александра Куцытой'],['seda','Седа Григорьевна'],['elena','Елена Малышева'],['anastasia','Анастасия']]){
+  assert.ok(html.includes('src="media/staff/'+file+'.jpg" alt="'+name+'"'));
+  assert.ok(readFileSync(new URL('../dist/media/staff/'+file+'.jpg',import.meta.url)).length>0);
+ }
+ assert.ok(html.includes('Мастер маникюра · эстетист'));
+ assert.ok(html.includes('Специалист по индивидуальным стелькам'));
+ assert.ok(!html.includes('Врач-ортопед'));
+ assert.ok(!html.includes('Стасия'));
  assert.ok(!html.includes('Фотографии и подробные профили дополним позже.'));
  assert.ok(!html.includes('Ежедневно 10:00–21:00'));
 });

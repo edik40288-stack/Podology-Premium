@@ -1,0 +1,182 @@
+{
+  "scope": "Responsive visual review, not completion of total business chaos audit",
+  "browser": "Chromium; real application in same-origin responsive iframe; no request mocks",
+  "crmBaseline": "d45986ef9045b4c135b47404cc92289aa5a00c72",
+  "siteBaseline": "34d4b39562d23df5f234d4cd5926b46775ff92d5",
+  "widthSweep": {
+    "site": [
+      {
+        "frameWidth": 320,
+        "contentClientWidth": 305,
+        "contentScrollWidth": 305,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 375,
+        "contentClientWidth": 360,
+        "contentScrollWidth": 360,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 390,
+        "contentClientWidth": 375,
+        "contentScrollWidth": 375,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 430,
+        "contentClientWidth": 415,
+        "contentScrollWidth": 415,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 768,
+        "contentClientWidth": 753,
+        "contentScrollWidth": 753,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 1024,
+        "contentClientWidth": 1009,
+        "contentScrollWidth": 1009,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 1280,
+        "contentClientWidth": 1265,
+        "contentScrollWidth": 1265,
+        "horizontalDocumentOverflow": 0
+      }
+    ],
+    "crmFinance": [
+      {
+        "frameWidth": 320,
+        "contentClientWidth": 305,
+        "contentScrollWidth": 305,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 375,
+        "contentClientWidth": 360,
+        "contentScrollWidth": 360,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 390,
+        "contentClientWidth": 375,
+        "contentScrollWidth": 375,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 430,
+        "contentClientWidth": 415,
+        "contentScrollWidth": 415,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 768,
+        "contentClientWidth": 753,
+        "contentScrollWidth": 753,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 1024,
+        "contentClientWidth": 1009,
+        "contentScrollWidth": 1009,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 1280,
+        "contentClientWidth": 1265,
+        "contentScrollWidth": 1265,
+        "horizontalDocumentOverflow": 0
+      }
+    ],
+    "clientVisitCard": [
+      {
+        "frameWidth": 320,
+        "contentClientWidth": 305,
+        "contentScrollWidth": 305,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 375,
+        "contentClientWidth": 360,
+        "contentScrollWidth": 360,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 390,
+        "contentClientWidth": 375,
+        "contentScrollWidth": 375,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 430,
+        "contentClientWidth": 415,
+        "contentScrollWidth": 415,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 768,
+        "contentClientWidth": 753,
+        "contentScrollWidth": 753,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 1024,
+        "contentClientWidth": 1009,
+        "contentScrollWidth": 1009,
+        "horizontalDocumentOverflow": 0
+      },
+      {
+        "frameWidth": 1280,
+        "contentClientWidth": 1265,
+        "contentScrollWidth": 1265,
+        "horizontalDocumentOverflow": 0
+      }
+    ]
+  },
+  "interactions": {
+    "crmOwnerFinanceAndExpenseForm": "PASS",
+    "crmStockTabs": "PASS",
+    "crmAdministratorBookingFirstStep": "PASS",
+    "crmSpecialistRequestForm": "PASS",
+    "crmManagerCalendarDayGrid": "PASS; calendar scroll stays inside its container",
+    "clientOverviewSectionsDisclosure": "PASS",
+    "clientVisitCardRoute": "PASS; synthetic upcoming visit has no published photos",
+    "clientProfileEditingFormLayout": "PASS; no changes saved",
+    "siteFilters": "PASS: manicure 6, podology 7",
+    "siteLightboxNextAndEscape": "PASS",
+    "siteFourLocalStaffPortraits": "PASS; all four images loaded"
+  },
+  "measurements": {
+    "expenseForm320": {
+      "beforeInputWidth": 198,
+      "afterInputWidth": 258,
+      "afterModalWidth": 305,
+      "afterModalScrollWidth": 305
+    },
+    "lightbox320": {
+      "dialogWidth": 288,
+      "clientWidth": 273,
+      "scrollWidth": 273,
+      "navigationFlexDirection": "row",
+      "closeControlVisible": true,
+      "counterAfterNext": "2 / 6"
+    },
+    "staff390": {
+      "portraitWidth": 329,
+      "portraitHeight": 411.25,
+      "allFourLoaded": true
+    }
+  },
+  "limits": [
+    "No real iPhone/Android device or native on-screen keyboard test",
+    "Responsive iframe uses desktop Chromium; no claim of touch-device emulation",
+    "Four CRM role modes of an owner QA account, not independent ACL/session testing",
+    "CRM financial totals are local synthetic/empty data, not a money consistency audit",
+    "Site used labelled reference-catalog fallback because its configured localhost:8787 API was unavailable; live booking/delivery not asserted",
+    "No production deployment; main unchanged"
+  ]
+}
