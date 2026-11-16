@@ -141,3 +141,17 @@ test('real photo gallery includes only attributed, explicitly provided DIKIDI im
  assert.ok(!html.includes('Фотографии и подробные профили дополним позже.'));
  assert.ok(!html.includes('Ежедневно 10:00–21:00'));
 });
+
+test('all four DIKIDI categories are visible in site navigation',()=>{
+ const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
+ assert.equal((html.match(/class="direction (?:podo|aesthetic|nails|orthopedics) reveal"/g)||[]).length,4);
+ assert.ok(html.includes('ЧЕТЫРЕ НАПРАВЛЕНИЯ'));
+ assert.ok(html.includes("selectCategory('Ортопедические Стельки ЦИТО')"));
+ assert.ok(html.includes('46 услуг'));
+ const categories=new Map();
+ for(const item of localServices)categories.set(item.category,(categories.get(item.category)||0)+1);
+ assert.equal(categories.get('ПОДОЛОГИЯ'),46);
+ assert.equal(categories.get('Ногтевой Сервис'),26);
+ assert.equal(categories.get('Педикюр и Маникюр ЭСТЕТИКА'),26);
+ assert.equal(categories.get('Ортопедические Стельки ЦИТО'),1);
+});
