@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>FullScreen</key>
+            <true/>
+            <key>IsRemovable</key>
+            <true/>
+            <key>Label</key>
+            <string>Подология Сайт</string>
+            <key>PayloadDescription</key>
+            <string>Настраивает ярлык для сайта Центра Подологии</string>
+            <key>PayloadDisplayName</key>
+            <string>Центр Подологии (Сайт)</string>
+            <key>PayloadIdentifier</key>
+            <string>ru.podology.center.website.webclip</string>
+            <key>PayloadType</key>
+            <string>com.apple.webClip.managed</string>
+            <key>PayloadUUID</key>
+            <string>a7d9b32e-5f11-4cb2-8d77-1a83091bb011</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>URL</key>
+            <string>http://192.168.100.13:4173/</string>
+            <key>Precomposed</key>
+            <true/>
+        </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>Установка веб-приложения Центра Подологии на домашний экран iPhone</string>
+    <key>PayloadDisplayName</key>
+    <string>Центр Подологии - Сайт</string>
+    <key>PayloadIdentifier</key>
+    <string>ru.podology.center.website.profile</string>
+    <key>PayloadOrganization</key>
+    <string>Podology Center</string>
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>d3f789e2-2a45-48b9-bb81-4328574900a1</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>

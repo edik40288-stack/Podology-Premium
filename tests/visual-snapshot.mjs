@@ -19,9 +19,9 @@ try{
   // Browser screenshots normally do not scroll through lazy-loaded photos.
   // Explicitly request media to verify the DIKIDI CDN instead of accepting blank cards.
   if(width===390||width===1440){
-    await page.evaluate(()=>document.querySelectorAll('.dikidi-photo img, #team img.staff-portrait').forEach(img=>{img.loading='eager'}));
+    await page.evaluate(()=>document.querySelectorAll('a[data-photo-group] img, #team img.staff-portrait').forEach(img=>{img.loading='eager'}));
     await page.waitForFunction(()=>[...document.querySelectorAll('#team img.staff-portrait')].every(img=>img.complete&&img.naturalWidth>0),null,{timeout:25000}).catch(()=>{});
-    await page.waitForFunction(()=>[...document.querySelectorAll('.dikidi-photo img')].every(img=>img.complete),null,{timeout:20000}).catch(()=>{});
+    await page.waitForFunction(()=>[...document.querySelectorAll('#gallery .photo-card img')].every(img=>img.complete),null,{timeout:20000}).catch(()=>{});
   }
   const measures=await page.evaluate(()=>{
    const s=(q)=>[...document.querySelectorAll(q)];
@@ -33,9 +33,9 @@ try{
     productCount:s('#product-list .product-card').length,
     staffPortraits:s('#team img.staff-portrait').length,
     loadedStaffPortraits:s('#team img.staff-portrait').filter(img=>img.complete&&img.naturalWidth>0).length,
-    sourcePhotos:s('.dikidi-photo img').length,
-    loadedPhotos:s('.dikidi-photo img').filter(img=>img.complete&&img.naturalWidth>0).length,
-    brokenPhotos:s('.dikidi-photo img').filter(img=>img.complete&&img.naturalWidth===0).length,
+    sourcePhotos:s('#gallery .photo-card img').length,
+    loadedPhotos:s('#gallery .photo-card img').filter(img=>img.complete&&img.naturalWidth>0).length,
+    brokenPhotos:s('#gallery .photo-card img').filter(img=>img.complete&&img.naturalWidth===0).length,
     bookingButtons:s('#service-list .booking-link').map(rect),
     primaryButtons:s('button.primary, a.primary').filter(el=>rect(el).width>0).map(rect),
     offlineBanner:s('.catalog-source-note').map(el=>el.textContent),
@@ -50,12 +50,24 @@ try{
      await staffPhotos.nth(index).evaluate(async(img)=>{try{await img.decode()}catch{}});
    }
    await page.locator('#team').screenshot({path:`${out}/team-${width}.png`,animations:'disabled'});
-   const photos=page.locator('#gallery .dikidi-photo img');
+   const photos=page.locator('#gallery .photo-card img');
    for(let index=0;index<await photos.count();index++){
      await photos.nth(index).scrollIntoViewIfNeeded();
      await photos.nth(index).evaluate(async(img)=>{try{await img.decode()}catch{}});
    }
    await page.locator('#gallery').screenshot({path:`${out}/gallery-${width}.png`,animations:'disabled'});
+   const allPhotos=page.locator('a[data-photo-group] img');
+   await allPhotos.evaluateAll(images=>images.forEach(img=>{img.loading='eager'}));
+   for(let n=0;n<await allPhotos.count();n++){await allPhotos.nth(n).evaluate(async img=>{try{await img.decode()}catch{}})}
+   const broken=await allPhotos.evaluateAll(images=>images.filter(img=>!img.complete||!img.naturalWidth).map(img=>img.getAttribute('src')));
+   assert.deepEqual(broken,[],'Public salon/work/certificate photos must load');
+   await page.locator('#gallery a.photo-card').first().click();
+   await page.locator('.photo-viewer[open]').waitFor();
+   await page.keyboard.press('ArrowRight');
+   assert.match(await page.locator('.photo-viewer [data-count]').innerText(),/^2 \/ /);
+   await page.keyboard.press('Escape');
+   await page.locator('.photo-viewer[open]').waitFor({state:'hidden'});
+   await page.screenshot({path:`${out}/gallery-after-close-${width}.png`,animations:'disabled'});
    await page.evaluate(()=>window.scrollTo(0,0));
   }
   await page.screenshot({path:`${out}/site-${width}.png`,fullPage:true,animations:'disabled'});

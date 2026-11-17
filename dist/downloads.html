@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Установка Подология: Сайт и CRM (iPhone & Mac)</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.85);
+      --accent: #0284c7;
+      --accent-hover: #0369a1;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+    body {
+      background: radial-gradient(circle at 50% 20%, #1e293b, var(--bg-dark));
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 32px 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 860px;
+      width: 100%;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(2, 132, 199, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+    p.lead {
+      color: var(--text-muted);
+      font-size: 16px;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 28px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .icon {
+      font-size: 28px;
+    }
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+    .step-box {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+    .step-box ol {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    .step-box li {
+      margin-bottom: 6px;
+    }
+    .lan-info {
+      background: rgba(2, 132, 199, 0.1);
+      border: 1px dashed rgba(56, 189, 248, 0.4);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    .lan-info code {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 3px 8px;
+      border-radius: 6px;
+      color: #38bdf8;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="badge">Локальная сеть (LAN) &bull; Синхронизация в реальном времени</div>
+      <h1>Установка Центра Подологии</h1>
+      <p class="lead">Пакеты установки для iPhone и Mac. Устройства в одной Wi-Fi сети взаимодействуют между собой без задержек.</p>
+    </div>
+
+    <div class="grid">
+      <!-- САЙТ -->
+      <div class="card">
+        <div>
+          <div class="card-title">
+            <span class="icon">🌐</span>
+            <span>Сайт и Личный Кабинет</span>
+          </div>
+          <div class="card-desc">
+            Клиентский портал с персонализированным циклом ухода (4–6 недель), повторной записью в 1 клик, статусами заказов косметики и историей визитов.
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <a href="/downloads/podology-site.mobileconfig" class="btn btn-primary">
+            📱 Скачать профиль для iPhone (.mobileconfig)
+          </a>
+          <a href="/downloads/PodologySite-Mac.zip" class="btn btn-secondary">
+            💻 Скачать приложение для Mac (PodologySite.zip)
+          </a>
+          <a href="http://192.168.100.13:4173/" class="btn btn-secondary" target="_blank">
+            🔗 Открыть в браузере (192.168.100.13:4173)
+          </a>
+        </div>
+
+        <div class="step-box">
+          <strong>📱 Инструкция для iPhone:</strong>
+          <ol>
+            <li>Нажмите синюю кнопку &laquo;Скачать профиль&raquo; в Safari.</li>
+            <li>Подтвердите загрузку профиля конфигурации.</li>
+            <li>Откройте <em>Настройки &rarr; Профиль загружен &rarr; Установить</em>.</li>
+            <li>Иконка появится на домашнем экране и будет работать как нативное приложение!</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- CRM -->
+      <div class="card">
+        <div>
+          <div class="card-title">
+            <span class="icon">💼</span>
+            <span>Профессиональная CRM</span>
+          </div>
+          <div class="card-desc">
+            Управление клиникой, админский План-Факт, защищенные права управляющего/владельца, график смен, расчет заработной платы и склад.
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <a href="/downloads/podology-crm.mobileconfig" class="btn btn-primary">
+            📱 Скачать профиль для iPhone (.mobileconfig)
+          </a>
+          <a href="/downloads/PodologyCRM-Mac.zip" class="btn btn-secondary">
+            💻 Скачать приложение для Mac (PodologyCRM.zip)
+          </a>
+          <a href="http://192.168.100.13:8787/" class="btn btn-secondary" target="_blank">
+            🔗 Открыть в браузере (192.168.100.13:8787)
+          </a>
+        </div>
+
+        <div class="step-box">
+          <strong>💻 Инструкция для Mac:</strong>
+          <ol>
+            <li>Скачайте архив приложения (<code>.zip</code>) и распакуйте его в папку <em>Программы</em> (/Applications).</li>
+            <li>Запустите приложение — оно откроет полноэкранный рабочий интерфейс без рамок браузера.</li>
+            <li>Либо в Safari нажмите <em>Файл &rarr; Добавить в Dock</em>.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="lan-info">
+      📶 <strong>Единая сеть Wi-Fi:</strong> Убедитесь, что iPhone и Mac подключены к той же беспроводной сети.<br>
+      IP хоста: <code>192.168.100.13</code> &bull; Сайт: <code>:4173</code> &bull; CRM: <code>:8787</code>
+    </div>
+  </div>
+</body>
+</html>
