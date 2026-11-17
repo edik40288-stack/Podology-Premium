@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - implementation/comments-2026-11-15
+      - fix/client-portal-2026-11-17
   workflow_dispatch:
 
 permissions:
